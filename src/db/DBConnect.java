@@ -9,9 +9,9 @@ public class DBConnect {
 	public static Connection getDBConnect() {
 		Connection conn = null;
 		// DB에서 가져올 테이블 이름, 계정, 비밀번호
-		String url = "jdbc:mysql://localhost/countryinfo";
-	    String id = "root";
- 	    String pw = "asdf1234";
+		String url = Setting.URL.toString();
+	    String id = Setting.USERNAME.toString();
+ 	    String pw = Setting.PASSWORD.toString();
 	    
 		try{
 		   	Class.forName("com.mysql.cj.jdbc.Driver");

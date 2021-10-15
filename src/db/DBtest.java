@@ -6,6 +6,7 @@ public class DBtest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 		DAO testDAO = new DAO();
 
 		ArrayList<DTO> selected1 = testDAO.selectDBAll();
