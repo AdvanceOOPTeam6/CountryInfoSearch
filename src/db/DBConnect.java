@@ -8,22 +8,22 @@ public class DBConnect {
 	
 	public static Connection getDBConnect() {
 		Connection conn = null;
-		// DB¿¡¼­ °¡Á®¿Ã Å×ÀÌºí ÀÌ¸§, °èÁ¤, ºñ¹Ğ¹øÈ£
-		String url = "jdbc:mysql://localhost/countryinfo";
-	    String id = "root";
- 	    String pw = "asdf1234";
+		// DBì—ì„œ ê°€ì ¸ì˜¬ í…Œì´ë¸” ì´ë¦„, ê³„ì •, ë¹„ë°€ë²ˆí˜¸
+		String url = Setting.URL.toString();
+	    String id = Setting.USERNAME.toString();
+ 	    String pw = Setting.PASSWORD.toString();
 	    
 		try{
 		   	Class.forName("com.mysql.cj.jdbc.Driver");
 	        conn = DriverManager.getConnection(url, id, pw);
-	        System.out.println("¿¬°á ¼º°ø");
+	        System.out.println("ì—°ê²° ì„±ê³µ");
 	        return conn;
 	   }
 	   catch(ClassNotFoundException e){
-	       System.out.println("µå¶óÀÌ¹ö ·Îµù ½ÇÆĞ");
+	       System.out.println("ë“œë¼ì´ë²„ ë¡œë”© ì‹¤íŒ¨");
 	   }
 	   catch(SQLException e){
-	       System.out.println("¿¡·¯: " + e);
+	       System.out.println("ì• ëŸ¬: " + e);
 	   }
 		return null;
 	}

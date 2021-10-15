@@ -9,11 +9,11 @@ import java.util.ArrayList;
 public class DAO {
 	Connection conn = DBConnect.getDBConnect();
 	
-	// ÇÑ °³¸¸ Ãâ·Â 
+	// í•œ ê°œë§Œ ì¶œë ¥
    	public ArrayList<DTO> selectDB(String countryname){
 	   ArrayList<DTO> resultSet = new ArrayList<>();
 	   
-	   // MYSQL ¿¡¼­ µ¥ÀÌÅÍ°¡ µé¾îÀÖ´Â Å×ÀÌºí Äõ¸®
+	   // MYSQL ì—ì„œ ë°ì´í„°ê°€ ë“¤ì–´ìˆëŠ” í…Œì´ë¸” ì¿¼ë¦¬
 	   String sql = "select * FROM countryinfo.countryinfo1";
            PreparedStatement pstat = null;
            ResultSet rs = null;
@@ -50,7 +50,7 @@ public class DAO {
 	return resultSet;
    }
    	
-   	// ÀüÃ¼ Ãâ·Â
+   	// ì „ì²´ ì¶œë ¥
    	public ArrayList<DTO> selectDBAll(){
  	   ArrayList<DTO> resultSet = new ArrayList<>();
  	   
