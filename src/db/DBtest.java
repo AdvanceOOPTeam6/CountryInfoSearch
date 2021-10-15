@@ -7,19 +7,19 @@ public class DBtest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		DAO testDAO = new DAO();
-		
+
 		ArrayList<DTO> selected1 = testDAO.selectDBAll();
 		for(DTO tempDTO1 : selected1) {
 			System.out.println(
 					tempDTO1.getCountry() +" "+
 					tempDTO1.getCode() +" "+
-					tempDTO1.getCapital() + " "+ 
+					tempDTO1.getCapital() + " "+
 					tempDTO1.getClimate()
 			);
 		}
 			
 			
-//		String countryname = "°¡³ª";
+//		String countryname = "ï¿½ï¿½ï¿½ï¿½";
 //		ArrayList<DTO> selected2 = testDAO.selectDB(countryname);
 //		for(DTO tempDTO2 : selected2) {
 //			System.out.println(
@@ -31,7 +31,7 @@ public class DBtest {
 //		}
 		
 	}
-	
+
 }
 
 
