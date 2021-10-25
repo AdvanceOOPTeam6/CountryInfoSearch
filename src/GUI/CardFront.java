@@ -14,7 +14,7 @@ public class CardFront extends JPanel {
         setLayout(null);
         setBackground(Color.black);
         flag = new Flag();
-        flag.setBounds(0,0,188, 110);
+        flag.setBounds(0,0,250, 130);
         add(flag);
     }
 
@@ -23,7 +23,7 @@ public class CardFront extends JPanel {
         this.capital = capital;
         this.language = language;
         flag = new Flag();
-        flag.setBounds(0,0,188, 110);
+        flag.setBounds(0,0,250, 130);
         add(flag);
     }
 }

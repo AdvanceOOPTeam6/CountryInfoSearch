@@ -3,11 +3,12 @@ package GUI;
 import javax.swing.*;
 
 public class Frame extends JFrame {
-    private JButton randomBtn;
 
     private CardFront cardFront;
     private CardBack cardBack;
-    private FlagCard[] flagCard;
+    private CountryListPane countryListPane;
+    private JTextField textInputField;
+
 
 
     public Frame(){
@@ -23,34 +24,20 @@ public class Frame extends JFrame {
 
     private void initComponent(){
         cardFront = new CardFront();
-        cardFront.setBounds(61,117,188,336);
+        cardFront.setBounds(60,100,250,400);
         getContentPane().add(cardFront);
 
         cardBack = new CardBack();
-        cardBack.setBounds(280, 117, 188, 336);
+        cardBack.setBounds(350, 100, 250, 400);
         getContentPane().add(cardBack);
 
-        flagCard = new FlagCard[9];
-        for(int i=0 ; i<9 ; i++){
-            flagCard[i] = new FlagCard();
-        }
+        countryListPane = new CountryListPane();
+        countryListPane.setBounds(640,100,250,400);
+        getContentPane().add(countryListPane);
 
-        flagCard[0].setBounds(513,117,145,89);
-        flagCard[1].setBounds(668,117,145,89);
-        flagCard[2].setBounds(823,117,145,89);
-        flagCard[3].setBounds(513,364,145,89);
-        flagCard[4].setBounds(668,364,145,89);
-        flagCard[5].setBounds(823,364,145,89);
-        flagCard[6].setBounds(513,240,145,89);
-        flagCard[7].setBounds(668,240,145,89);
-        flagCard[8].setBounds(823,240,145,89);
-        for(int i=0 ; i<9 ; i++){
-            getContentPane().add(flagCard[i]);
-        }
-
-        randomBtn = new JButton("Random");
-        randomBtn.setBounds(410,484,205,42);
-        getContentPane().add(randomBtn);
+        textInputField = new JTextField();
+        textInputField.setBounds(640, 70, 250, 20);
+        getContentPane().add(textInputField);
 
     }
 }
