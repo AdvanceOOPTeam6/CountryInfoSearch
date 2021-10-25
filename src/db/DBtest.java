@@ -1,10 +1,11 @@
 package db;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class DBtest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 
 		DAO testDAO = new DAO();
@@ -18,6 +19,11 @@ public class DBtest {
 					tempDTO1.getClimate()
 			);
 		}
+
+		// 국가 이미지 불러오기
+		CountryFlagAPI flag = new CountryFlagAPI();
+		String a = flag.CountryFlag("GH");
+		System.out.println(a);
 			
 			
 //		String countryname = "����";
