@@ -1,12 +1,13 @@
-package db;
+package GUI;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public class ChartPane extends JPanel implements MouseListener {
-    public ChartPane(){
+public class FlagPane extends JPanel implements MouseListener {
+
+    public FlagPane() {
         setVisible(true);
         setBounds(100,100, 400, 400);
         setBackground(Color.black);
