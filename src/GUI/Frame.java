@@ -1,6 +1,7 @@
 package GUI;
 
 import javax.swing.*;
+import java.io.IOException;
 
 public class Frame extends JFrame {
 
@@ -23,7 +24,11 @@ public class Frame extends JFrame {
     }
 
     private void initComponent(){
-        cardFront = new CardFront();
+        try {
+            cardFront = new CardFront();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         cardFront.setBounds(60,100,250,400);
         getContentPane().add(cardFront);
 

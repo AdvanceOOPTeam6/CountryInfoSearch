@@ -2,6 +2,7 @@ package GUI;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class CardFront extends JPanel {
 
@@ -10,7 +11,7 @@ public class CardFront extends JPanel {
     private String capital;
     private String language;
 
-    public CardFront() {
+    public CardFront() throws IOException {
         setLayout(null);
         setBackground(Color.black);
         flag = new Flag();
@@ -18,7 +19,7 @@ public class CardFront extends JPanel {
         add(flag);
     }
 
-    public CardFront(String countryName, String capital, String language) {
+    public CardFront(String countryName, String capital, String language) throws IOException {
         this.countryName = countryName;
         this.capital = capital;
         this.language = language;
