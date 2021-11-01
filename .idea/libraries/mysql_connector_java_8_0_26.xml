@@ -4,6 +4,7 @@
       <root url="jar://$USER_HOME$/Downloads/json-20210307.jar!/" />
       <root url="jar://$USER_HOME$/Downloads/json-simple-1.1.1.jar!/" />
       <root url="jar://$USER_HOME$/mysql-connector-java-8.0.26/mysql-connector-java-8.0.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/batik-all-1.8pre-r1084380.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

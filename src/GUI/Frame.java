@@ -1,7 +1,11 @@
 package GUI;
 
+import org.apache.batik.transcoder.TranscoderException;
+
 import javax.swing.*;
 import java.io.IOException;
+
+
 
 public class Frame extends JFrame {
 
@@ -26,11 +30,12 @@ public class Frame extends JFrame {
     private void initComponent(){
         try {
             cardFront = new CardFront();
-        } catch (IOException e) {
+            cardFront.setBounds(60,100,250,400);
+            getContentPane().add(cardFront);
+        } catch (IOException | TranscoderException e) {
             e.printStackTrace();
         }
-        cardFront.setBounds(60,100,250,400);
-        getContentPane().add(cardFront);
+
 
         cardBack = new CardBack();
         cardBack.setBounds(350, 100, 250, 400);

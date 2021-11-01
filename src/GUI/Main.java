@@ -9,8 +9,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    private static Frame frame;
 
+    public static void main(String[] args) throws IOException {
         DAO testDAO = new DAO();
 
         ArrayList<DTO> selected1 = testDAO.selectDBAll();
@@ -31,7 +32,7 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Frame();
+                frame = new Frame();
             }
         });
     }

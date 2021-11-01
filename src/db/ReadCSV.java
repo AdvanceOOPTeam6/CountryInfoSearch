@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ReadCSV  {
-    public static List<List<String>> ABC = new ArrayList<List<String>>();
+    public static List<List<String>> listCSV = new ArrayList<List<String>>();
 
 
     public static void LoadFile(String locationFilePath){
@@ -33,7 +33,7 @@ public class ReadCSV  {
                 //System.out.println(tmpList.get(1));
                 //System.out.println(tmpList);
                 ret.add(tmpList);
-                ABC.add(tmpList);
+                listCSV.add(tmpList);
             }
         }catch(FileNotFoundException e){
             e.printStackTrace();
