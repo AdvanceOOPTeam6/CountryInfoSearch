@@ -1,7 +1,4 @@
 package GUI;
-
-import org.apache.batik.transcoder.TranscoderException;
-
 import javax.swing.*;
 import java.io.IOException;
 
@@ -29,10 +26,10 @@ public class Frame extends JFrame {
 
     private void initComponent(){
         try {
-            cardFront = new CardFront();
+            cardFront = new CardFront("GH","아크라","영어");
             cardFront.setBounds(60,100,250,400);
             getContentPane().add(cardFront);
-        } catch (IOException | TranscoderException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
