@@ -7,23 +7,22 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Icon extends JPanel{
-    private URL url;
+public class Icon{
     private Image image;
+    private ImageIcon updateIcon;
 
 
     public Icon(String url) throws IOException {
-        this.url = new URL("file://" + url);
-        image = ImageIO.read(this.url);
-        ImageIcon icon = new ImageIcon(image);
-        Image toResize = icon.getImage();
-        Image updateImg = toResize.getScaledInstance(512,512,Image.SCALE_SMOOTH);
+        image = ImageIO.read(new URL("file://" + url));
+        ImageIcon imageicon = new ImageIcon(image);
+        Image toResize = imageicon.getImage();
+        Image updateImg = toResize.getScaledInstance(40,40,Image.SCALE_SMOOTH);
 
-        ImageIcon updateIcon = new ImageIcon(updateImg);
+        updateIcon = new ImageIcon(updateImg);
 
-        JLabel label = new JLabel(updateIcon);
-        label.setHorizontalAlignment(JLabel.CENTER);
-        add(label);
     }
 
+    public ImageIcon getUpdateIcon() {
+        return updateIcon;
+    }
 }

@@ -64,16 +64,10 @@ public class CardFront extends JPanel {
         add(continent);
 
         // 아이콘
-        image = ImageIO.read(new URL("file:///Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/flag-outline.png"));
-        ImageIcon imageicon = new ImageIcon(image);
-        Image toResize = imageicon.getImage();
-        Image updateImg = toResize.getScaledInstance(40,40,Image.SCALE_SMOOTH);
-
-        ImageIcon updateIcon = new ImageIcon(updateImg);
-
-        cardCapital_Icon = new JLabel(updateIcon);
+        icon = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/flag-outline.png");
+        cardCapital_Icon = new JLabel(icon.getUpdateIcon());
         cardCapital_Icon.setHorizontalAlignment(JLabel.CENTER);
-        cardCapital_Icon.setBounds(30,200,40,40);
+        cardCapital_Icon.setBounds(30,220,40,40);
         add(cardCapital_Icon);
     }
 
