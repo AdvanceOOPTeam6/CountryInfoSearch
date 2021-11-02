@@ -45,56 +45,56 @@ public class CardBack extends JPanel {
 
         // 아이콘
         // 수도
-//        Icon icon_capital = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/flag-outline.png",30,30);
+//        Icon icon_capital = new Icon("src/GUI/Icons/flag-outline.png",30,30);
 //        capital_icon = new JLabel(icon_capital.getUpdateIcon());
 //        capital_icon.setHorizontalAlignment(JLabel.CENTER);
 //        capital_icon.setBounds(10, 90, 30, 30);
 //        add(capital_icon);
 
         // 기후
-        Icon icon_climate = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/sunny-outline.png",30,30);
+        Icon icon_climate = new Icon("src/GUI/Icons/sunny-outline.png",30,30);
         climate_icon = new JLabel(icon_climate.getUpdateIcon());
         climate_icon.setHorizontalAlignment(JLabel.CENTER);
         climate_icon.setBounds(10, 90, 30, 30);
         add(climate_icon);
 
         // 위치
-        Icon icon_location = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/earth-outline.png",30,30);
+        Icon icon_location = new Icon("src/GUI/Icons/earth-outline.png",30,30);
         location_icon = new JLabel(icon_location.getUpdateIcon());
         location_icon.setHorizontalAlignment(JLabel.CENTER);
         location_icon.setBounds(10, 130, 30, 30);
         add(location_icon);
 
         // 주요도시
-        Icon icon_city= new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/business-outline.png",30,30);
+        Icon icon_city= new Icon("src/GUI/Icons/business-outline.png",30,30);
         city_icon = new JLabel(icon_city.getUpdateIcon());
         city_icon.setHorizontalAlignment(JLabel.CENTER);
         city_icon.setBounds(10, 170, 30, 30);
         add(city_icon);
 
         // 종교
-        Icon icon_religion= new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/peace.png",30,30);
+        Icon icon_religion= new Icon("src/GUI/Icons/peace.png",30,30);
         religion_icon = new JLabel(icon_religion.getUpdateIcon());
         religion_icon.setHorizontalAlignment(JLabel.CENTER);
         religion_icon.setBounds(10, 210, 30, 30);
         add(religion_icon);
 
         // 주요민족
-        Icon icon_ethnic= new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/person-outline.png",30,30);
+        Icon icon_ethnic= new Icon("src/GUI/Icons/person-outline.png",30,30);
         ethnic_icon = new JLabel(icon_ethnic.getUpdateIcon());
         ethnic_icon.setHorizontalAlignment(JLabel.CENTER);
         ethnic_icon.setBounds(10, 250, 30, 30);
         add(ethnic_icon);
 
         //면적
-        Icon icon_area= new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/layers-outline.png",30,30);
+        Icon icon_area= new Icon("src/GUI/Icons/layers-outline.png",30,30);
         area_icon = new JLabel(icon_area.getUpdateIcon());
         area_icon.setHorizontalAlignment(JLabel.CENTER);
         area_icon.setBounds(10, 290, 30, 30);
         add(area_icon);
 
         //언어
-//        Icon icon_language= new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/earth-outline.png",30,30);
+//        Icon icon_language= new Icon("src/GUI/Icons/earth-outline.png",30,30);
 //        language_icon = new JLabel(icon_language.getUpdateIcon());
 //        language_icon.setHorizontalAlignment(JLabel.CENTER);
 //        language_icon.setBounds(10, 370, 30, 30);

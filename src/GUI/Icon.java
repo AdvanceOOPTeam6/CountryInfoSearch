@@ -13,7 +13,7 @@ public class Icon{
 
 
     public Icon(String url) throws IOException {
-        image = ImageIO.read(new URL("file://" + url));
+        image = ImageIO.read(new URL("file://"  + System.getProperty("user.dir") + '/' + url));
         ImageIcon imageicon = new ImageIcon(image);
         Image toResize = imageicon.getImage();
         Image updateImg = toResize.getScaledInstance(40,40,Image.SCALE_SMOOTH);
@@ -23,13 +23,12 @@ public class Icon{
     }
 
     public Icon(String url,int width,int height) throws IOException {
-        image = ImageIO.read(new URL("file://" + url));
+        image = ImageIO.read(new URL("file://" + System.getProperty("user.dir") + '/' + url));
         ImageIcon imageicon = new ImageIcon(image);
         Image toResize = imageicon.getImage();
         Image updateImg = toResize.getScaledInstance(width,height,Image.SCALE_SMOOTH);
 
         updateIcon = new ImageIcon(updateImg);
-
     }
 
     public ImageIcon getUpdateIcon() {

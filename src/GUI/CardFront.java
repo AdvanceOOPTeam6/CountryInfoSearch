@@ -39,19 +39,19 @@ public class CardFront extends JPanel {
         add(flag);
 
         // 아이콘
-        Icon icon_code = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/code-working-outline.png");
+        Icon icon_code = new Icon("src/GUI/Icons/code-working-outline.png");
         countryCode_icon = new JLabel(icon_code.getUpdateIcon());
         countryCode_icon.setHorizontalAlignment(JLabel.CENTER);
         countryCode_icon.setBounds(30, 220, 40, 40);
         add(countryCode_icon);
 
-        Icon icon_capital = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/flag-outline.png");
+        Icon icon_capital = new Icon("src/GUI/Icons/flag-outline.png");
         capital_icon = new JLabel(icon_capital.getUpdateIcon());
         capital_icon.setHorizontalAlignment(JLabel.CENTER);
         capital_icon.setBounds(30, 280, 40, 40);
         add(capital_icon);
 
-        Icon icon_lang = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/chatbubbles-outline.png");
+        Icon icon_lang = new Icon("src/GUI/Icons/chatbubbles-outline.png");
         language_icon = new JLabel(icon_lang.getUpdateIcon());
         language_icon.setHorizontalAlignment(JLabel.CENTER);
         language_icon.setBounds(30, 340, 40, 40);
@@ -107,19 +107,19 @@ public class CardFront extends JPanel {
         add(flag);
 
         // 아이콘
-        Icon icon_code = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/code-working-outline.png");
+        Icon icon_code = new Icon("src/GUI/Icons/code-working-outline.png");
         countryCode_icon = new JLabel(icon_code.getUpdateIcon());
         countryCode_icon.setHorizontalAlignment(JLabel.CENTER);
         countryCode_icon.setBounds(30, 220, 40, 40);
         add(countryCode_icon);
 
-        Icon icon_capital = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/flag-outline.png");
+        Icon icon_capital = new Icon("src/GUI/Icons/flag-outline.png");
         capital_icon = new JLabel(icon_capital.getUpdateIcon());
         capital_icon.setHorizontalAlignment(JLabel.CENTER);
         capital_icon.setBounds(30, 280, 40, 40);
         add(capital_icon);
 
-        Icon icon_lang = new Icon("/Users/kimbohyeon/IdeaProjects/CountryInfoSearch/src/GUI/Icons/chatbubbles-outline.png");
+        Icon icon_lang = new Icon("src/GUI/Icons/chatbubbles-outline.png");
         language_icon = new JLabel(icon_lang.getUpdateIcon());
         language_icon.setHorizontalAlignment(JLabel.CENTER);
         language_icon.setBounds(30, 340, 40, 40);
