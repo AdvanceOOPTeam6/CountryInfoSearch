@@ -29,14 +29,16 @@ public class Frame extends JFrame {
             cardFront = new CardFront("GH","아크라","영어");
             cardFront.setBounds(60,100,250,400);
             getContentPane().add(cardFront);
+
+            cardBack = new CardBack();
+            cardBack.setBounds(350, 100, 250, 400);
+            getContentPane().add(cardBack);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-        cardBack = new CardBack();
-        cardBack.setBounds(350, 100, 250, 400);
-        getContentPane().add(cardBack);
+
 
         countryListPane = new CountryListPane();
         countryListPane.setBounds(640,100,250,400);

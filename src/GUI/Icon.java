@@ -22,6 +22,16 @@ public class Icon{
 
     }
 
+    public Icon(String url,int width,int height) throws IOException {
+        image = ImageIO.read(new URL("file://" + url));
+        ImageIcon imageicon = new ImageIcon(image);
+        Image toResize = imageicon.getImage();
+        Image updateImg = toResize.getScaledInstance(width,height,Image.SCALE_SMOOTH);
+
+        updateIcon = new ImageIcon(updateImg);
+
+    }
+
     public ImageIcon getUpdateIcon() {
         return updateIcon;
     }

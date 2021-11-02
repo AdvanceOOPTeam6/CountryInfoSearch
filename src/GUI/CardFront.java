@@ -11,9 +11,6 @@ import java.net.URL;
 public class CardFront extends JPanel {
 
     private Flag flag;
-//    private String countryName;
-//    private String capital;
-//    private String language;
 
     private JLabel cardTitle;
     private JLabel continent;
