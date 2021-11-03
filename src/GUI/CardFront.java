@@ -27,9 +27,6 @@ public class CardFront extends JPanel {
     private Font subTitleFont;
     private Font contentFont;
 
-    private CardBack cardBack;
-    private boolean isVisible = true;
-
     public CardFront() throws IOException{
 
         setLayout(null);
@@ -165,10 +162,5 @@ public class CardFront extends JPanel {
         this.language.setFont(contentFont);
         this.language.setBounds(80, 340, 100, 40);
         add(this.language);
-    }
-
-
-    public void setCardBack(CardBack cardBack) {
-        this.cardBack = cardBack;
     }
 }
