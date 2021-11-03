@@ -3,6 +3,7 @@ package GUI;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,9 @@ public class CardFront extends JPanel {
     private Font titleFont;
     private Font subTitleFont;
     private Font contentFont;
+
+    private CardBack cardBack;
+    private boolean isVisible = true;
 
     public CardFront() throws IOException{
 
@@ -161,6 +165,10 @@ public class CardFront extends JPanel {
         this.language.setFont(contentFont);
         this.language.setBounds(80, 340, 100, 40);
         add(this.language);
+    }
 
+
+    public void setCardBack(CardBack cardBack) {
+        this.cardBack = cardBack;
     }
 }

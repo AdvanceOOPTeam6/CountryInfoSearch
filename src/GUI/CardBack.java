@@ -32,9 +32,14 @@ public class CardBack extends JPanel {
     private Font titleFont;
     private Font subTitleFont;
     private Font contentFont;
+
+    private Boolean isVisible = false;
+    private CardFront cardFront;
+
     public CardBack() throws IOException {
         setLayout(null);
         setBackground(Color.white);
+        setVisible(isVisible);
 
         ////////////////////////////////////////////////////////////////
         /////// 이미지 출력단
@@ -154,5 +159,9 @@ public class CardBack extends JPanel {
         area.setFont(contentFont);
         area.setBounds(50, 285, 200, 40);
         add(area);
+    }
+
+    public void setCardFront(CardFront cardFront) {
+        this.cardFront = cardFront;
     }
 }
