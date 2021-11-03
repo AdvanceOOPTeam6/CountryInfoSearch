@@ -15,7 +15,8 @@ public class Frame extends JFrame {
     private CountryListPane countryListPane;
     private JTextField textInputField;
 
-    private boolean isVisible = true;
+    private boolean isVisible1 = true;
+    private boolean isVisible2 = true;
 
     public Frame(){
         super("나라사랑카드");                 // 타이틀
@@ -27,14 +28,13 @@ public class Frame extends JFrame {
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
 
-        cardBack.setVisible(!isVisible);
 
         cardFront.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                isVisible = !isVisible;
-                cardFront.setVisible(isVisible);
-                cardBack.setVisible(!isVisible);
+                isVisible1 = !isVisible1;
+                cardFront.setVisible(isVisible1);
+                cardBack.setVisible(!isVisible1);
             }
 
             @Override
@@ -60,9 +60,9 @@ public class Frame extends JFrame {
         cardBack.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                isVisible = !isVisible;
-                cardFront.setVisible(isVisible);
-                cardBack.setVisible(!isVisible);
+                isVisible1 = !isVisible1;
+                cardFront.setVisible(isVisible1);
+                cardBack.setVisible(!isVisible1);
             }
 
             @Override
@@ -88,9 +88,9 @@ public class Frame extends JFrame {
         cardFront2.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                isVisible = !isVisible;
-                cardFront2.setVisible(isVisible);
-                cardBack2.setVisible(!isVisible);
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
             }
 
             @Override
@@ -116,9 +116,9 @@ public class Frame extends JFrame {
         cardBack2.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                isVisible = !isVisible;
-                cardFront2.setVisible(isVisible);
-                cardBack2.setVisible(!isVisible);
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
             }
 
             @Override
