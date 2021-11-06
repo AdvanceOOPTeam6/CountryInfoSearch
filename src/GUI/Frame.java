@@ -18,7 +18,7 @@ public class Frame extends JFrame {
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
 
-    public Frame(){
+    public Frame() throws IOException {
         super("나라사랑카드");                 // 타이틀
         getContentPane().setLayout(null);       // Absolute layout
         initComponent();
@@ -143,10 +143,10 @@ public class Frame extends JFrame {
         });
     }
 
-    private void initComponent(){
+    private void initComponent() throws IOException {
         try {
             // 첫번째 카드
-            cardFront = new CardFront("GH","아크라","영어");
+            cardFront = new CardFront("가나","아프리카","GH","아크라","영어",new Flag());
             cardFront.setBounds(60,100,250,400);
             getContentPane().add(cardFront);
 
@@ -155,7 +155,7 @@ public class Frame extends JFrame {
             getContentPane().add(cardBack);
 
             // 두번째 카드
-            cardFront2 = new CardFront("GH","아크라","영어");
+            cardFront2 = new CardFront("가나","아프리카","GH","아크라","영어",new Flag());
             cardFront2.setBounds(350, 100, 250, 400);
             getContentPane().add(cardFront2);
 
@@ -166,9 +166,6 @@ public class Frame extends JFrame {
             e.printStackTrace();
         }
 
-
-
-
         countryListPane = new CountryListPane();
         countryListPane.setBounds(640,100,250,400);
         getContentPane().add(countryListPane);
@@ -177,6 +174,78 @@ public class Frame extends JFrame {
         textInputField.setBounds(640, 70, 250, 20);
         getContentPane().add(textInputField);
 
+        setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
+
+    }
+
+    public void setNewCard(String countryName, String continent, String countryCode, String capital, String language, String climate, String city, String religion, String ethnic, String area, Flag flag) throws IOException {
+        getContentPane().remove(cardFront2);
+        getContentPane().remove(cardBack2);
+        // 두번째 카드
+        cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,flag);
+        cardFront2.setBounds(350, 100, 250, 400);
+        getContentPane().add(cardFront2);
+
+        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area);
+        cardBack2.setBounds(350, 100, 250, 400);
+        getContentPane().add(cardBack2);
+
+        cardFront2.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
+        cardBack2.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
     }
 
 }

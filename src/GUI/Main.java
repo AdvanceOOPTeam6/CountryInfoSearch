@@ -5,8 +5,6 @@ import db.DAO;
 import db.DTO;
 
 import javax.swing.*;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -27,17 +25,19 @@ public class Main {
             );
         }
 
-        // 국가 이미지 불러오기
-        CountryFlagAPI flag = new CountryFlagAPI();
-        String a = flag.CountryFlag("GH");
-        System.out.println(a);
+//         국가 이미지 불러오기
+//        CountryFlagAPI flag = new CountryFlagAPI();
+//        String a = flag.CountryFlag("GH");
+//        System.out.println(a);
 
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                frame = new Frame();
-
-            }
-        });
+//        SwingUtilities.invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                frame = new Frame();
+//
+//            }
+//        });
+        frame = new Frame();
+        frame.setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
     }
 }

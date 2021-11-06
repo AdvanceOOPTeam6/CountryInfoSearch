@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="mysql-connector-java-8.0.26">
     <CLASSES>
-      <root url="jar://$USER_HOME$/Downloads/json-20210307.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/json-simple-1.1.1.jar!/" />
-      <root url="jar://$USER_HOME$/mysql-connector-java-8.0.26/mysql-connector-java-8.0.26.jar!/" />
-      <root url="jar://$PROJECT_DIR$/src/batik-all-1.8pre-r1084380.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/아카이브/json-20210307.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/아카이브/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.26.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
