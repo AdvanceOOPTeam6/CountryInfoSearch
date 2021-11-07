@@ -31,7 +31,7 @@ public class Main {
 //        System.out.println(a);
 
         CountryFlagAPI abc = new CountryFlagAPI();
-        abc.CountryFlag("GH");
+        abc.CountryFlag("KR");
 
 
         SwingUtilities.invokeLater(new Runnable() {

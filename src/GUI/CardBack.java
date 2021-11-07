@@ -6,6 +6,7 @@ import java.io.IOException;
 
 public class CardBack extends JPanel {
     private Flag flag;
+    private Graph graph;
 
     private JLabel cardTitle;
     private JLabel continent;
@@ -38,6 +39,11 @@ public class CardBack extends JPanel {
         flag = new Flag(125,80);
         flag.setBounds(0, 0, 125, 80);
         add(flag);
+
+        //그래프
+        graph = new Graph();
+        graph.setBounds(0,330,250,70);
+        add(graph);
 
         // 아이콘
         // 수도
@@ -158,12 +164,18 @@ public class CardBack extends JPanel {
         setBackground(Color.white);
         setVisible(false);
 
+
         ////////////////////////////////////////////////////////////////
         /////// 이미지 출력단
         // 국기
         flag = new Flag(125,80);
         flag.setBounds(0, 0, 125, 80);
         add(flag);
+
+        //그래프
+        graph = new Graph();
+        graph.setBounds(0,330,250,70);
+        add(graph);
 
         // 아이콘
         // 수도
