@@ -9,3 +9,4 @@ public final class Setting {
     public static final String PASSWORD = "asdf1234";
     public static final String URL = "jdbc:mysql://13.124.240.220/countryinfo";
 }
+

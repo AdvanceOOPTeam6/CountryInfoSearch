@@ -3,7 +3,6 @@ package db;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -13,16 +12,16 @@ import java.util.List;
 public class ReadCSV  {
     public static List<List<String>> listCSV = new ArrayList<List<String>>();
 
-
     public static void LoadFile(String locationFilePath){
         //반환용 리스트
         List<List<String>> ret = new ArrayList<List<String>>();
         BufferedReader br = null;
 
         try{
-            br = Files.newBufferedReader(Paths.get("C:\\Users\\H\\Desktop\\csvfile.csv"));
+            br = Files.newBufferedReader(Paths.get("C:\\Users\\secti\\Desktop\\csv.csv"));
             //Charset.forName("UTF-8");
             String line = "";
+            System.out.println(br);
 
             while((line = br.readLine()) != null){
                 //CSV 1행을 저장하는 리스트
@@ -48,8 +47,8 @@ public class ReadCSV  {
                 e.printStackTrace();
             }
         }
-//        for(int i = 0; i<ABC.size(); i++)
-//        System.out.println(ABC.get(i).get(1));
+        for(int i = 1; i<listCSV.size(); i++)
+        System.out.println(listCSV.get(i).get(9));
 
 
     }
