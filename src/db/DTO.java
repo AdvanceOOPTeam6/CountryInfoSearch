@@ -1,5 +1,7 @@
 package db;
 
+import java.sql.Struct;
+
 public class DTO {
     String country = null;
     String code = null;

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="JavaSE-16" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="JDBC" value="project"/>
+		<level name="mysql-connector-java-8.0.26" value="project"/>
+	</levels>
+</component>
