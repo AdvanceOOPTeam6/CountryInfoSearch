@@ -5,12 +5,12 @@ import java.util.ArrayList;
 
 import static db.ReadCSV.listCSV;
 
-public class DBtest {
+public class DBTest {
 
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) throws IOException {
+        // TODO Auto-generated method stub
 
-		DAO testDAO = new DAO();
+        DAO testDAO = new DAO();
 //		ArrayList<DTO> search = testDAO.selectSearchDB("가");
 //		for(DTO tempDTO1 : search) {
 //			System.out.println(
@@ -30,12 +30,12 @@ public class DBtest {
 //		}
 //
 //		// 국가 이미지 불러오기
-//		CountryFlagAPI flag = new CountryFlagAPI();
-//		String a = flag.CountryFlag("GH");
-//		System.out.println(a);
+        CountryFlagAPI flag = new CountryFlagAPI();
+        String a = flag.CountryFlag("GH");
+        System.out.println(a);
 
 
-		// CSV 파일 불러오기
+        // CSV 파일 불러오기
 //		ReadCSV.LoadFile("1");
 //        for(int i = 0; i<listCSV.size(); i++){
 //			String a1 = listCSV.get(i).get(1);
@@ -51,10 +51,10 @@ public class DBtest {
 //			String a12 = listCSV.get(i).get(12);
 //			String a13 = listCSV.get(i).get(13);
 
-		}
+    }
 
 
-		// CSV 데이터 테스트
+    // CSV 데이터 테스트
 //		System.out.println(listCSV.get(1).get(1));
 //		// 테스트 데이터
 //		String a1 = "a11";
@@ -72,10 +72,10 @@ public class DBtest {
 //		String a13 = "a131";
 //		int a14 = 1231;
 
-		// 테이블 만들기
+    // 테이블 만들기
 //		testDAO.CreateTable();
 
-		// 데이터를 db에 넣기기
+    // 데이터를 db에 넣기기
 //		DTO dto = new DTO(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14);
 //		int count = testDAO.insertData(dto);
 //		if(count > 0){
@@ -93,14 +93,11 @@ public class DBtest {
 //			System.out.println(
 //					tempDTO2.getCountry() +" "+
 //					tempDTO2.getCode() +" "+
-//					tempDTO2.getCapital() + " "+ 
+//					tempDTO2.getCapital() + " "+
 //					tempDTO2.getClimate()
 //			);
 //		}
-		
+
 
 
 }
-
-
-
