@@ -11,6 +11,13 @@ public class DBtest {
 		// TODO Auto-generated method stub
 
 		DAO testDAO = new DAO();
+//		ArrayList<DTO> search = testDAO.selectSearchDB("가");
+//		for(DTO tempDTO1 : search) {
+//			System.out.println(
+//					tempDTO1.getCountry()
+//			);
+//		}
+
 
 //		ArrayList<DTO> selected1 = testDAO.selectDBAll();
 //		for(DTO tempDTO1 : selected1) {

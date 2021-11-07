@@ -43,6 +43,10 @@ public class DTO {
 
 	}
 
+	public DTO(String country) {
+		this.country = country;
+	}
+
 	public String getCountry() {
 		return country;
 	}
