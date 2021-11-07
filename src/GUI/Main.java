@@ -25,19 +25,25 @@ public class Main {
             );
         }
 
-//         국가 이미지 불러오기
+////         국가 이미지 불러오기
 //        CountryFlagAPI flag = new CountryFlagAPI();
 //        String a = flag.CountryFlag("GH");
 //        System.out.println(a);
 
-//        SwingUtilities.invokeLater(new Runnable() {
-//            @Override
-//            public void run() {
-//                frame = new Frame();
-//
-//            }
-//        });
-        frame = new Frame();
-        frame.setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
+        CountryFlagAPI abc = new CountryFlagAPI();
+        abc.CountryFlag("GH");
+
+
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    new Frame();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
     }
 }

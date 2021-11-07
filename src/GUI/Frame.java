@@ -174,7 +174,7 @@ public class Frame extends JFrame {
         textInputField.setBounds(640, 70, 250, 20);
         getContentPane().add(textInputField);
 
-        setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
+//        setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
 
     }
 
@@ -183,13 +183,6 @@ public class Frame extends JFrame {
         getContentPane().remove(cardBack2);
         // 두번째 카드
         cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,flag);
-        cardFront2.setBounds(350, 100, 250, 400);
-        getContentPane().add(cardFront2);
-
-        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area);
-        cardBack2.setBounds(350, 100, 250, 400);
-        getContentPane().add(cardBack2);
-
         cardFront2.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -218,6 +211,10 @@ public class Frame extends JFrame {
                 // 비어있음
             }
         });
+        cardFront2.setBounds(350, 100, 250, 400);
+        getContentPane().add(cardFront2);
+
+        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area);
         cardBack2.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -246,6 +243,9 @@ public class Frame extends JFrame {
                 // 비어있음
             }
         });
+        cardBack2.setBounds(350, 100, 250, 400);
+        getContentPane().add(cardBack2);
+
     }
 
 }
