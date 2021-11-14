@@ -33,7 +33,8 @@ public class CountryListPane extends JScrollPane {
             public void valueChanged(ListSelectionEvent e) {
                 if(!e.getValueIsAdjusting()) {
                     setClickedValue((String) countryList.getSelectedValue());
-//                    System.out.println(clickedValue);
+                    //System.out.println(clickedValue);
+                    searchDAO.selectDB(clickedValue);
                 }
             }
         });

@@ -118,7 +118,7 @@ public class DAO {
         finally {
             try {
                 if( rs != null) rs.close();
-                if( conn != null) conn.close();
+//                if( conn != null) conn.close();
                 if( pstat != null) pstat.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -155,7 +155,7 @@ public class DAO {
         finally {
             try {
                 if( rs != null) rs.close();
-                if( conn != null) conn.close();
+//                if( conn != null) conn.close();
                 if( pstat != null) pstat.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -196,7 +196,7 @@ public class DAO {
         finally {
             try {
                 if( rs != null) rs.close();
-                if( conn != null) conn.close();
+//                if( conn != null) conn.close();
                 if( pstat != null) pstat.close();
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -236,7 +236,7 @@ public class DAO {
         finally {
             try {
                 if( rs != null) rs.close();
-                if( conn != null) conn.close();
+//                if( conn != null) conn.close();
                 if( pstat != null) pstat.close();
             } catch (SQLException e) {
                 e.printStackTrace();
