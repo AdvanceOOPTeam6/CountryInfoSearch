@@ -18,11 +18,12 @@ public class DTO {
     String languages = null;
     int baseyear = 0;
 
-    public DTO(String country, String code, String capital, String climate) {
+    public DTO(String country, String code, String capital, String majorcity, String languages) {
         this.country = country;
         this.code = code;
         this.capital =  capital;
-        this.climate = climate;
+        this.majorcity = majorcity;
+        this.languages = languages;
     }
 
     public DTO(String country, String code, String capital, String climate, String location, String majorcity, String religion, String ethnicgroup, String media, int area, String areasource, String areadescript, String languages, int baseyear) {

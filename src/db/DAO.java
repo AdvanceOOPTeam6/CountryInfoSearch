@@ -184,8 +184,9 @@ public class DAO {
                     String country = rs.getString(1);
                     String code =rs.getString(2);
                     String capital =rs.getString(3);
-                    String climate = rs.getString(4);
-                    resultSet.add(new DTO(country,code,capital,climate));
+                    String majorcity = rs.getString(6);
+                    String languages = rs.getString(13);
+                    resultSet.add(new DTO(country,code,capital,majorcity,languages));
                 }
 
             }
@@ -225,7 +226,17 @@ public class DAO {
                 String code =rs.getString(2);
                 String capital =rs.getString(3);
                 String climate = rs.getString(4);
-                resultSet.add(new DTO(country,code,capital,climate));
+                String location = rs.getString(5);
+                String majorcity =rs.getString(6);
+                String religion =rs.getString(7);
+                String ethnicgroup = rs.getString(8);
+                String media = rs.getString(9);
+                int area =rs.getInt(10);
+                String areasource =rs.getString(11);
+                String areadescript = rs.getString(12);
+                String languages =rs.getString(13);
+                int baseyear = rs.getInt(14);
+                resultSet.add(new DTO(country,code,capital,climate,location,majorcity,religion,ethnicgroup,media,area,areasource,areadescript,languages,baseyear));
 
 
             }
