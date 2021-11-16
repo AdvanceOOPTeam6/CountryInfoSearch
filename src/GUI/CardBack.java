@@ -159,7 +159,7 @@ public class CardBack extends JPanel {
     }
 
 
-    public CardBack(String climate, String continent, String city, String religion, String ethnic, String area ) throws IOException {
+    public CardBack(String climate, String continent, String city, String religion, String ethnic, String area , Flag flag) throws IOException {
         setLayout(null);
         setBackground(Color.white);
         setVisible(false);
@@ -168,9 +168,9 @@ public class CardBack extends JPanel {
         ////////////////////////////////////////////////////////////////
         /////// 이미지 출력단
         // 국기
-        flag = new Flag(125,80);
-        flag.setBounds(0, 0, 125, 80);
-        add(flag);
+        this.flag = flag;
+        this.flag.setBounds(0, 0, 125, 80);
+        add(this.flag);
 
         //그래프
         graph = new Graph();
@@ -260,7 +260,7 @@ public class CardBack extends JPanel {
         add(this.climate);
 
         // 위치
-        location = new JLabel("아프리카");
+        location = new JLabel(continent);
         location.setFont(contentFont);
         location.setBounds(50, 125, 200, 40);
         add(location);

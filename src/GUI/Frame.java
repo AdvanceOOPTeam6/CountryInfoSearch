@@ -1,4 +1,6 @@
 package GUI;
+import db.DAO;
+
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -91,6 +93,7 @@ public class Frame extends JFrame {
                 isVisible2 = !isVisible2;
                 cardFront2.setVisible(isVisible2);
                 cardBack2.setVisible(!isVisible2);
+                System.out.println("Front is clicked");
             }
 
             @Override
@@ -119,6 +122,7 @@ public class Frame extends JFrame {
                 isVisible2 = !isVisible2;
                 cardFront2.setVisible(isVisible2);
                 cardBack2.setVisible(!isVisible2);
+                System.out.println("Back is clicked");
             }
 
             @Override
@@ -146,11 +150,11 @@ public class Frame extends JFrame {
     private void initComponent() throws IOException {
         try {
             // 첫번째 카드
-            cardFront = new CardFront("한국","아시아","KR","서울","한국어",new Flag("https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
+            cardFront = new CardFront("한국","아시아","KR","서울","한국어",new Flag(250,130,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
             cardFront.setBounds(60,100,250,400);
             getContentPane().add(cardFront);
 
-            cardBack = new CardBack();
+            cardBack = new CardBack("대륙성기후","아시아","서울,인천,부산","기독교","한민족","1,004만 128.5㏊",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
             cardBack.setBounds(60,100,250,400);
             getContentPane().add(cardBack);
 
@@ -166,7 +170,7 @@ public class Frame extends JFrame {
             e.printStackTrace();
         }
 
-        countryListPane = new CountryListPane();
+        countryListPane = new CountryListPane(this);
         countryListPane.setBounds(640,100,250,400);
         getContentPane().add(countryListPane);
 
@@ -183,15 +187,75 @@ public class Frame extends JFrame {
 
         getContentPane().remove(cardFront2);
         getContentPane().remove(cardBack2);
-        // 두번째 카드
+//         두번째 카드
         cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,flag);
         cardFront2.setBounds(350, 100, 250, 400);
         getContentPane().add(cardFront2);
 
-        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area);
+        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area,flag);
         cardBack2.setBounds(350, 100, 250, 400);
         getContentPane().add(cardBack2);
 
+        cardFront2.setVisible(isVisible2);
+        cardBack2.setVisible(isVisible2);
+        cardFront2.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
+                System.out.println("Front is clicked");
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
+        cardBack2.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                isVisible2 = !isVisible2;
+                cardFront2.setVisible(isVisible2);
+                cardBack2.setVisible(!isVisible2);
+                System.out.println("Back is clicked");
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
     }
 
 }

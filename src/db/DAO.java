@@ -6,6 +6,21 @@ import java.util.ArrayList;
 public class DAO {
     Connection conn = DBConnect.getDBConnect();
 
+    private String country;
+    private String code;
+    private String capital;
+    private String climate;
+    private String location;
+    private String majorcity;
+    private String religion;
+    private String ethnicgroup;
+    private String media;
+    private int area;
+    private String areasource;
+    private String areadescript;
+    private String languages;
+    private int baseyear;
+
     public void CreateTable() {
         try{
             String sql = "create table country7(" +
@@ -181,12 +196,22 @@ public class DAO {
 
             while(rs.next()) {
                 if(rs.getString(1).equals(countryname)){
-                    String country = rs.getString(1);
-                    String code =rs.getString(2);
-                    String capital =rs.getString(3);
-                    String majorcity = rs.getString(6);
-                    String languages = rs.getString(13);
+                    country = rs.getString(1);
+                    code =rs.getString(2);
+                    capital =rs.getString(3);
+                    climate = rs.getString(4);
+                    location = rs.getString(5);
+                    majorcity =rs.getString(6);
+                    religion =rs.getString(7);
+                    ethnicgroup = rs.getString(8);
+                    media = rs.getString(9);
+                    area =rs.getInt(10);
+                    areasource =rs.getString(11);
+                    areadescript = rs.getString(12);
+                    languages =rs.getString(13);
+                    baseyear = rs.getInt(14);
                     resultSet.add(new DTO(country,code,capital,majorcity,languages));
+                    System.out.println("country: " +country +"\ncode: " + code + "\ncapital: "+capital + "\nmajorcity: " + majorcity + "\nlanguages:" + languages +"\n\n");
                 }
 
             }
@@ -222,20 +247,20 @@ public class DAO {
 
             while(rs.next()) {
 
-                String country = rs.getString(1);
-                String code =rs.getString(2);
-                String capital =rs.getString(3);
-                String climate = rs.getString(4);
-                String location = rs.getString(5);
-                String majorcity =rs.getString(6);
-                String religion =rs.getString(7);
-                String ethnicgroup = rs.getString(8);
-                String media = rs.getString(9);
-                int area =rs.getInt(10);
-                String areasource =rs.getString(11);
-                String areadescript = rs.getString(12);
-                String languages =rs.getString(13);
-                int baseyear = rs.getInt(14);
+                country = rs.getString(1);
+                code =rs.getString(2);
+                capital =rs.getString(3);
+                climate = rs.getString(4);
+                location = rs.getString(5);
+                majorcity =rs.getString(6);
+                religion =rs.getString(7);
+                ethnicgroup = rs.getString(8);
+                media = rs.getString(9);
+                area =rs.getInt(10);
+                areasource =rs.getString(11);
+                areadescript = rs.getString(12);
+                languages =rs.getString(13);
+                baseyear = rs.getInt(14);
                 resultSet.add(new DTO(country,code,capital,climate,location,majorcity,religion,ethnicgroup,media,area,areasource,areadescript,languages,baseyear));
 
 
@@ -257,4 +282,59 @@ public class DAO {
         return resultSet;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getCapital() {
+        return capital;
+    }
+
+    public String getClimate() {
+        return climate;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getMajorcity() {
+        return majorcity;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public String getEthnicgroup() {
+        return ethnicgroup;
+    }
+
+    public String getMedia() {
+        return media;
+    }
+
+    public int getArea() {
+        return area;
+    }
+
+    public String getAreasource() {
+        return areasource;
+    }
+
+    public String getAreadescript() {
+        return areadescript;
+    }
+
+    public String getLanguages() {
+        return languages;
+    }
+
+    public int getBaseyear() {
+        return baseyear;
+    }
 }

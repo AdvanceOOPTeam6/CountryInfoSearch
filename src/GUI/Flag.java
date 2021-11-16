@@ -28,12 +28,12 @@ public class Flag extends JPanel {
          add(label);
     }
 
-    public Flag(String url) throws IOException {
+    public Flag(int width, int height, String url) throws IOException {
         this.url = new URL(url);
         image = ImageIO.read(this.url);
         ImageIcon icon = new ImageIcon(image);
         Image toResize = icon.getImage();
-        Image updateImg = toResize.getScaledInstance(250,130, Image.SCALE_SMOOTH);
+        Image updateImg = toResize.getScaledInstance(width,height, Image.SCALE_SMOOTH);
 
         ImageIcon updateIcon = new ImageIcon(updateImg);
 
