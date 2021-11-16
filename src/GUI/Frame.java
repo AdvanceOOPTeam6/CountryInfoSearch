@@ -87,64 +87,6 @@ public class Frame extends JFrame {
                 // 비어있음
             }
         });
-        cardFront2.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                isVisible2 = !isVisible2;
-                cardFront2.setVisible(isVisible2);
-                cardBack2.setVisible(!isVisible2);
-                System.out.println("Front is clicked");
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                // 비어있음
-            }
-        });
-        cardBack2.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                isVisible2 = !isVisible2;
-                cardFront2.setVisible(isVisible2);
-                cardBack2.setVisible(!isVisible2);
-                System.out.println("Back is clicked");
-            }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                // 비어있음
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                // 비어있음
-            }
-        });
     }
 
     private void initComponent() throws IOException {
@@ -158,14 +100,6 @@ public class Frame extends JFrame {
             cardBack.setBounds(60,100,250,400);
             getContentPane().add(cardBack);
 
-            // 두번째 카드
-            cardFront2 = new CardFront("가나","아프리카","GH","아크라","영어",new Flag());
-            cardFront2.setBounds(350, 100, 250, 400);
-            getContentPane().add(cardFront2);
-
-            cardBack2 = new CardBack();
-            cardBack2.setBounds(350, 100, 250, 400);
-            getContentPane().add(cardBack2);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -178,21 +112,23 @@ public class Frame extends JFrame {
         textInputField.setBounds(640, 70, 250, 20);
         getContentPane().add(textInputField);
 
-        setNewCard("OO","OO","OO","OO","OO","OO","OO","OO","OO", "OO", new Flag());
+        setNewCard("가나","아프리카","GH","아크라","영어","OO","OO","OO","OO", "OO", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
 
     }
 
-    public void setNewCard(String countryName, String continent, String countryCode, String capital, String language, String climate, String city, String religion, String ethnic, String area, Flag flag) throws IOException {
+    public void setNewCard(String countryName, String continent, String countryCode, String capital, String language, String climate, String city, String religion, String ethnic, String area, String flagUrl) throws IOException {
         isVisible2 = true;
 
-        getContentPane().remove(cardFront2);
-        getContentPane().remove(cardBack2);
+        if(cardFront != null && cardBack2 != null) {
+            getContentPane().remove(cardFront2);
+            getContentPane().remove(cardBack2);
+        }
 //         두번째 카드
-        cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,flag);
+        cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,new Flag(250,130,flagUrl));
         cardFront2.setBounds(350, 100, 250, 400);
         getContentPane().add(cardFront2);
 
-        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area,flag);
+        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area,new Flag(125,80,flagUrl));
         cardBack2.setBounds(350, 100, 250, 400);
         getContentPane().add(cardBack2);
 

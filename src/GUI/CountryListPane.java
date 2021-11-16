@@ -53,7 +53,7 @@ public class CountryListPane extends JScrollPane {
                             searchDAO.getCapital(),searchDAO.getLanguages(),
                             searchDAO.getClimate(),searchDAO.getMajorcity(),
                             searchDAO.getReligion(),searchDAO.getEthnicgroup(),Integer.toString(searchDAO.getArea()),
-                                new Flag(250,130,flagApi.CountryFlag(searchDAO.getCode())));
+                                flagApi.CountryFlag(searchDAO.getCode()));
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }

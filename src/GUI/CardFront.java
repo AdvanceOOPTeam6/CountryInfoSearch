@@ -140,26 +140,26 @@ public class CardFront extends JPanel {
         subTitleFont = new Font("Monaco", Font.PLAIN, 15);
         this.continent = new JLabel(continent);
         this.continent.setFont(subTitleFont);
-        this.continent.setBounds(30, 180, 240, 30);
+        this.continent.setBounds(30, 180, 220, 30);
         add(this.continent);
 
         // 국가 코드
         contentFont = new Font("Monaco", Font.PLAIN, 20);
         this.countryCode = new JLabel(countryCode);
         this.countryCode.setFont(contentFont);
-        this.countryCode.setBounds(80, 220, 100, 40);
+        this.countryCode.setBounds(80, 220, 170, 40);
         add(this.countryCode);
 
         // 국가 수도
         this.capital = new JLabel(capital);
         this.capital.setFont(contentFont);
-        this.capital.setBounds(80, 280, 100, 40);
+        this.capital.setBounds(80, 280, 170, 40);
         add(this.capital);
 
         // 국가 언어
         this.language = new JLabel(language);
         this.language.setFont(contentFont);
-        this.language.setBounds(80, 340, 100, 40);
+        this.language.setBounds(80, 340, 170, 40);
         add(this.language);
     }
 }

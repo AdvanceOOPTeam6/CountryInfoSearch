@@ -249,7 +249,7 @@ public class CardBack extends JPanel {
         subTitleFont = new Font("Monaco", Font.PLAIN, 13);
         this.continent = new JLabel(continent);
         this.continent.setFont(subTitleFont);
-        this.continent.setBounds(144, 50, 80, 20);
+        this.continent.setBounds(144, 50, 106, 20);
         add(this.continent);
 
         // 기후
