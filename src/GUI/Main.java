@@ -25,7 +25,25 @@ public class Main {
             );
         }
 
-////         국가 이미지 불러오기
+//        System.out.println("=========================================");
+//
+//        ArrayList<DTO> search = testDAO.selectDB("가나");
+//        for(DTO tempDTO1 : search) {
+//            System.out.println(
+//                    tempDTO1.getCountry() +" 국가"+
+//                            tempDTO1.getCode() +" 코드 "+
+//                            tempDTO1.getCapital() + " 수도 "+
+//                            tempDTO1.getClimate()  + " 기후 "+
+//                            tempDTO1.getLocation()+ " 지역 "+
+//                            tempDTO1.getLanguages()+ " 언어 "+
+//                            tempDTO1.getMajorcity()+ " 주요도시 "+
+//                            tempDTO1.getReligion() + " 종교 "+
+//                            tempDTO1.getEthnicgroup() + " 인종 "+
+//                            Integer.toString(tempDTO1.getArea())
+//            );
+//        }
+
+//        국가 이미지 불러오기
 //        CountryFlagAPI flag = new CountryFlagAPI();
 //        String a = flag.CountryFlag("GH");
 //        System.out.println(a);

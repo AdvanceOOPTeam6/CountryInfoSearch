@@ -40,25 +40,20 @@ public class CountryListPane extends JScrollPane {
             public void valueChanged(ListSelectionEvent e) {
                 if(!e.getValueIsAdjusting()) {
                     setClickedValue((String) countryList.getSelectedValue());
-                    //System.out.println(clickedValue);
-                    searchDAO.selectDB(clickedValue);
-                    System.out.println(searchDAO.getCountry());
-                    try {
-                        System.out.println(flagApi.CountryFlag(searchDAO.getCode()));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
+                    System.out.println("클릭함 "+clickedValue);
+                    ArrayList<DTO> search = searchDAO.selectDB(clickedValue);
+                    for(DTO tempDTO1 : search) {
+                        System.out.println(tempDTO1.getCountry());
+                        try {
+                            frame.setNewCard(tempDTO1.getCountry(),tempDTO1.getLocation(),tempDTO1.getCode(),
+                                    tempDTO1.getCapital(),tempDTO1.getLanguages(),
+                                    tempDTO1.getClimate(),tempDTO1.getMajorcity(),
+                                    tempDTO1.getReligion(),tempDTO1.getEthnicgroup(),Integer.toString(tempDTO1.getArea()),
+                                    flagApi.CountryFlag(tempDTO1.getCode()));
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
                     }
-                    try {
-                        frame.setNewCard(searchDAO.getCountry(),searchDAO.getLocation(),searchDAO.getCode(),
-                            searchDAO.getCapital(),searchDAO.getLanguages(),
-                            searchDAO.getClimate(),searchDAO.getMajorcity(),
-                            searchDAO.getReligion(),searchDAO.getEthnicgroup(),Integer.toString(searchDAO.getArea()),
-                                flagApi.CountryFlag(searchDAO.getCode()));
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-
-
                 }
             }
         });

@@ -48,6 +48,19 @@ public class DTO {
         this.country = country;
     }
 
+    public DTO(String country, String location, String code, String capital, String languages, String climate, String majorcity, String religion, String ethnicgroup, int area) {
+        this.country = country;
+        this.code = code;
+        this.capital =  capital;
+        this.climate = climate;
+        this.location = location;
+        this.majorcity = majorcity;
+        this.religion = religion;
+        this.ethnicgroup = ethnicgroup;
+        this.area = area;
+        this.languages = languages;
+    }
+
     public String getCountry() {
         return country;
     }

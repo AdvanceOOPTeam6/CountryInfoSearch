@@ -110,7 +110,8 @@ public class DAO {
         ArrayList<DTO> resultSet = new ArrayList<>();
 
         // MYSQL 에서 데이터가 들어있는 테이블 쿼리
-        String sql = "select * FROM countryinfo.countryinfo1";
+//        String sql = "select * FROM countryinfo.countryinfo1";
+        String sql = "select * FROM countryinfo.country7 order by country";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 
@@ -185,7 +186,8 @@ public class DAO {
         ArrayList<DTO> resultSet = new ArrayList<>();
 
         // MYSQL 에서 데이터가 들어있는 테이블 쿼리
-        String sql = "select * FROM countryinfo.countryinfo1";
+//        String sql = "select * FROM countryinfo.countryinfo1";
+        String sql = "select * FROM countryinfo.country7";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 
@@ -204,14 +206,14 @@ public class DAO {
                     majorcity =rs.getString(6);
                     religion =rs.getString(7);
                     ethnicgroup = rs.getString(8);
-                    media = rs.getString(9);
+//                    media = rs.getString(9);
                     area =rs.getInt(10);
-                    areasource =rs.getString(11);
-                    areadescript = rs.getString(12);
+//                    areasource =rs.getString(11);
+//                    areadescript = rs.getString(12);
                     languages =rs.getString(13);
-                    baseyear = rs.getInt(14);
-                    resultSet.add(new DTO(country,code,capital,majorcity,languages));
-                    System.out.println("country: " +country +"\ncode: " + code + "\ncapital: "+capital + "\nmajorcity: " + majorcity + "\nlanguages:" + languages +"\n\n");
+//                    baseyear = rs.getInt(14);
+                    resultSet.add(new DTO(country,location,code,capital,languages,climate,majorcity,religion,ethnicgroup,area));
+//                    System.out.println("country: " +country +"\ncode: " + code + "\ncapital: "+capital + "\nmajorcity: " + majorcity + "\nlanguages:" + languages +"\n\n");
                 }
 
             }
@@ -235,8 +237,8 @@ public class DAO {
     // 전체 출력
     public ArrayList<DTO> selectDBAll(){
         ArrayList<DTO> resultSet = new ArrayList<>();
-
-        String sql = "select * FROM countryinfo.countryinfo1";
+//        String sql = "select * FROM countryinfo.countryinfo1";
+        String sql = "select * FROM countryinfo.country7";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 
@@ -280,61 +282,5 @@ public class DAO {
         }
 
         return resultSet;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public String getCapital() {
-        return capital;
-    }
-
-    public String getClimate() {
-        return climate;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public String getMajorcity() {
-        return majorcity;
-    }
-
-    public String getReligion() {
-        return religion;
-    }
-
-    public String getEthnicgroup() {
-        return ethnicgroup;
-    }
-
-    public String getMedia() {
-        return media;
-    }
-
-    public int getArea() {
-        return area;
-    }
-
-    public String getAreasource() {
-        return areasource;
-    }
-
-    public String getAreadescript() {
-        return areadescript;
-    }
-
-    public String getLanguages() {
-        return languages;
-    }
-
-    public int getBaseyear() {
-        return baseyear;
     }
 }
