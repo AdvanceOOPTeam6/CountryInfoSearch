@@ -18,7 +18,7 @@ public class ReadCSV  {
         BufferedReader br = null;
 
         try{
-            br = Files.newBufferedReader(Paths.get("C:\\Users\\secti\\Desktop\\csv.csv"));
+            br = Files.newBufferedReader(Paths.get("C:\\Users\\H\\Desktop\\csv2.csv"));
             //Charset.forName("UTF-8");
             String line = "";
             System.out.println(br);

@@ -23,7 +23,7 @@ public class DAO {
 
     public void CreateTable() {
         try{
-            String sql = "create table country7(" +
+            String sql = "create table country6(" +
                     "  country text, " +
                     "  ISO varchar(10)," +
                     "  capital text," +
@@ -67,7 +67,7 @@ public class DAO {
 //					.append()
 
         // 현재 country7 table에 임시 데이터를 넣어서 테스트 중
-        String sql = "insert into country7 values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into country6 values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         PreparedStatement pstat = null;
         int result = 0;
@@ -111,7 +111,7 @@ public class DAO {
 
         // MYSQL 에서 데이터가 들어있는 테이블 쿼리
 //        String sql = "select * FROM countryinfo.countryinfo1";
-        String sql = "select * FROM countryinfo.country7 order by country";
+        String sql = "select * FROM countryinfo.country6 order by country";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 
@@ -187,7 +187,7 @@ public class DAO {
 
         // MYSQL 에서 데이터가 들어있는 테이블 쿼리
 //        String sql = "select * FROM countryinfo.countryinfo1";
-        String sql = "select * FROM countryinfo.country7";
+        String sql = "select * FROM countryinfo.country6";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 
@@ -238,7 +238,7 @@ public class DAO {
     public ArrayList<DTO> selectDBAll(){
         ArrayList<DTO> resultSet = new ArrayList<>();
 //        String sql = "select * FROM countryinfo.countryinfo1";
-        String sql = "select * FROM countryinfo.country7";
+        String sql = "select * FROM countryinfo.country6";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 

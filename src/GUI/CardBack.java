@@ -173,7 +173,8 @@ public class CardBack extends JPanel {
         add(this.flag);
 
         //그래프
-        graph = new Graph();
+//        graph = new Graph();
+        graph = new Graph(religion);
         graph.setBounds(0,330,250,70);
         add(graph);
 
