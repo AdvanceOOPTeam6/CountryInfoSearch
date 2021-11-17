@@ -280,7 +280,7 @@ public class CardBack extends JPanel {
         // 주요 민족
         this.ethnic= new JLabel(ethnic);
         this.ethnic.setFont(contentFont);
-        this.setBounds(50, 245, 200, 40);
+        this.ethnic.setBounds(50, 245, 200, 40);
         add(this.ethnic);
 
         // 면적

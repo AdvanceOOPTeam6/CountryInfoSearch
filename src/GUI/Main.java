@@ -27,7 +27,7 @@ public class Main {
 
 //        System.out.println("=========================================");
 //
-//        ArrayList<DTO> search = testDAO.selectDB("가나");
+//        ArrayList<DTO> search = testDAO.selectDB("그리스");
 //        for(DTO tempDTO1 : search) {
 //            System.out.println(
 //                    tempDTO1.getCountry() +" 국가"+
