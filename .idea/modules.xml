@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Countryinfo.iml" filepath="$PROJECT_DIR$/Countryinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CountryInfoSearch.iml" filepath="$PROJECT_DIR$/CountryInfoSearch.iml" />
     </modules>
   </component>
 </project>
