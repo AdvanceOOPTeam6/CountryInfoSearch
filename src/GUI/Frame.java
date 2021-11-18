@@ -1,10 +1,13 @@
 package GUI;
 import db.DAO;
+import db.DTO;
 
 import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 
@@ -16,6 +19,8 @@ public class Frame extends JFrame {
     private CardBack cardBack2;
     private CountryListPane countryListPane;
     private JTextField textInputField;
+    private JButton searchBtn;
+    private JButton goBackBtn;
 
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
@@ -87,6 +92,73 @@ public class Frame extends JFrame {
                 // 비어있음
             }
         });
+        searchBtn.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            	String searchValue= textInputField.getText();
+            	if(searchValue.isEmpty()) { //입력안됐을경우
+            		JOptionPane.showMessageDialog(null, "나라를 입력해주세요", "알림 메시지", JOptionPane.INFORMATION_MESSAGE);
+            	}
+            	else {
+            		HashMap<String, String> searchMap = new HashMap<String, String>();
+                	DAO searchDAO = new DAO();
+                    ArrayList<DTO> searchinit = searchDAO.searchDB("");
+                    for(DTO tempDTO1 : searchinit) {
+                        searchMap.put(tempDTO1.getCountry(),tempDTO1.getCountry());
+                    }
+                    countryListPane.setClear(); //list를 클리어
+                    countryListPane.setSearch(searchMap.get(searchValue)); //검색한값만 나오게
+                    System.out.print(searchMap.get(searchValue));
+            	}
+            	
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
+        goBackBtn.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+            	 countryListPane.setBack(); //목록으로
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                // 비어있음
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                // 비어있음
+            }
+        });
     }
 
     private void initComponent() throws IOException {
@@ -109,9 +181,17 @@ public class Frame extends JFrame {
         getContentPane().add(countryListPane);
 
         textInputField = new JTextField();
-        textInputField.setBounds(640, 70, 250, 20);
+        textInputField.setBounds(640, 70, 190, 20);
         getContentPane().add(textInputField);
-
+        
+        searchBtn= new JButton("검색");
+        searchBtn.setBounds(830, 70, 60, 20);
+        getContentPane().add(searchBtn);
+        
+        goBackBtn= new JButton("목록으로");
+        goBackBtn.setBounds(710, 500, 100, 30);
+        getContentPane().add(goBackBtn);
+        
         setNewCard("가나","아프리카","GH","아크라","영어","OO","OO","OO","OO", "OO", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
 
     }
