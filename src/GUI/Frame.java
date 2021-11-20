@@ -29,6 +29,7 @@ public class Frame extends JFrame {
         super("나라사랑카드");                 // 타이틀
         getContentPane().setLayout(null);       // Absolute layout
         initComponent();
+        createMenu();
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
         setSize(1000, 600);        // 1000(width) X 600(height)
@@ -272,6 +273,36 @@ public class Frame extends JFrame {
                 // 비어있음
             }
         });
+    }
+
+    private void createMenu() {
+        JMenuBar mb = new JMenuBar(); // 메뉴바 생성
+        JMenu screenMenu = new JMenu("보기");
+        JMenuItem [] menuItem = new JMenuItem [4];
+        String[] itemTitle = {"불러오기", "숨기기", "다시보기", "닫기"};
+//        // 보기 메뉴에 메뉴아이템 생성 삽입
+//        screenMenu.add(new JMenuItem("불러오기"));
+//        screenMenu.add(new JMenuItem("숨기기"));
+//        screenMenu.add(new JMenuItem("다시보기"));
+//        screenMenu.addSeparator(); // 분리선 삽입
+//        screenMenu.add(new JMenuItem("닫기"));
+
+        Menu listener = new Menu(); // Action 리스너 생성
+        for(int i=0; i<menuItem.length; i++) {
+            menuItem[i] = new JMenuItem(itemTitle[i]); // 메뉴아이템 생성
+            menuItem[i].addActionListener(listener); // 메뉴아이템에 Action 리스너 등록
+            screenMenu.add(menuItem[i]); // 메뉴아이템을 Screen 메뉴에 삽입
+        }
+
+        // 메뉴바에 메뉴 삽입
+        mb.add(new JMenu("파일"));
+        mb.add(screenMenu); // 보기 메뉴 삽입
+        mb.add(new JMenu("편집"));
+        mb.add(new JMenu("프로젝트"));
+        mb.add(new JMenu("도움말"));
+
+        // 메뉴바를 프레임에 부착
+        setJMenuBar(mb);
     }
 
 }
