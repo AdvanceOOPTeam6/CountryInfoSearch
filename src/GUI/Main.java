@@ -17,12 +17,12 @@ public class Main {
 
         ArrayList<DTO> selected1 = testDAO.selectDBAll();
         for(DTO tempDTO1 : selected1) {
-            System.out.println(
-                    tempDTO1.getCountry() +" "+
-                            tempDTO1.getCode() +" "+
-                            tempDTO1.getCapital() + " "+
-                            tempDTO1.getClimate()
-            );
+//            System.out.println(
+//                    tempDTO1.getCountry() +" "+
+//                            tempDTO1.getCode() +" "+
+//                            tempDTO1.getCapital() + " "+
+//                            tempDTO1.getClimate()
+//            );
         }
 
 ////         국가 이미지 불러오기
