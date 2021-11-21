@@ -6,9 +6,8 @@ import javax.swing.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-
+import java.util.*;
+import java.util.Map.Entry;
 
 
 public class Frame extends JFrame {
@@ -107,9 +106,17 @@ public class Frame extends JFrame {
                     for(DTO tempDTO1 : searchinit) {
                         searchMap.put(tempDTO1.getCountry(),tempDTO1.getCountry());
                     }
+
                     countryListPane.setClear(); //list를 클리어
-                    countryListPane.setSearch(searchMap.get(searchValue)); //검색한값만 나오게
+                    List<String> containValue = new ArrayList<>();
+                    for (Entry<String,String> entry : searchMap.entrySet()) {
+                        if(entry.getValue().contains(searchValue)) {
+                            containValue.add(entry.getValue());
+                            countryListPane.setSearch(containValue); //검색한값만 나오게
+                        }
+                    }
                     System.out.print(searchMap.get(searchValue));
+
             	}
             	
             }

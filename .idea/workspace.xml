@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76fc37fa-f25d-4f4a-b392-ffa342636599" name="Changes" comment="" />
+    <list default="true" id="76fc37fa-f25d-4f4a-b392-ffa342636599" name="Changes" comment="Changes">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021-11-14__5_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2021-11-14__5_58__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CountryInfoSearch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CountryInfoSearch.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CountryListPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CountryListPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CountryListPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Frame.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,13 +61,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Desktop/mysql-connector-java-8.0.27" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -68,7 +89,7 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.Main" />
-      <module name="CountryDB" />
+      <module name="CountryInfoSearch" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="GUI.*" />
@@ -88,6 +109,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,5 +184,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CountryInfoSearch$Main.ic" NAME="Main Coverage Results" MODIFIED="1637157731263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>GUI.*</FILTER>
+    </SUITE>
   </component>
 </project>

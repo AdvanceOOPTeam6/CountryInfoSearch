@@ -9,6 +9,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 public class CountryListPane extends JScrollPane {
     private Frame frame;
@@ -67,13 +68,17 @@ public class CountryListPane extends JScrollPane {
         add(countryList);
         setViewportView(countryList);
     }
-    public void setSearch(String s) {
-    	String[] temp= new String[1];
-    	temp[0]=s;
+    public void setSearch(List<String> s) { //리스트형식으로 받아오게 변경
+        int size = 0;
+        String[] temp= new String[s.size()];
+        for(String contry: s) {
+            temp[size++] = contry;
+        }
     	countryList = new JList(temp);
         add(countryList);
         setViewportView(countryList);
         DAO searchDAO = new DAO();
+
         countryList.addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
