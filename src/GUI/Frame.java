@@ -15,6 +15,7 @@ public class Frame extends JFrame {
     private CardBack cardBack2;
     private CountryListPane countryListPane;
     private JTextField textInputField;
+    private Intro intro;
 
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
@@ -30,8 +31,7 @@ public class Frame extends JFrame {
         setSize(1000, 600);         // 1000(width) X 600(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
-
-
+        
         cardFront.addMouseListener(new MouseListener() {
             @Override
             public void mouseClicked(MouseEvent e) {
