@@ -169,7 +169,7 @@ public class CardBack extends JPanel {
         /////// 이미지 출력단
         // 국기
         this.flag = flag;
-        this.flag.setBounds(0, 0, 125, 80);
+        this.flag.setBounds(0, -10, 125, 80);
         add(this.flag);
 
         //그래프
