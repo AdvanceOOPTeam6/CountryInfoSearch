@@ -20,21 +20,22 @@ public class Frame extends JFrame {
     private JTextField textInputField;
     private JButton searchBtn;
     private JButton goBackBtn;
+    private Intro intro;
 
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
 
     public Frame() throws IOException {
-        super("나라사랑카드");                 // 타이틀
+        super("나라사랑카드");                // 타이틀
+        new SetData();                          // csv파일 받기
         getContentPane().setLayout(null);       // Absolute layout
         initComponent();
         createMenu();
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
-        setSize(1000, 600);        // 1000(width) X 600(height)
+        setSize(1000, 600);         // 1000(width) X 600(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
-
 
         cardFront.addMouseListener(new MouseListener() {
             @Override

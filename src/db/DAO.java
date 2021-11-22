@@ -61,13 +61,29 @@ public class DAO {
 
     }
 
+    public int deleteData() {
+
+        String sql = "TRUNCATE TABLE countryinfo1";
+        PreparedStatement pstat = null;
+        int result = 0;
+
+        try {
+            pstat = conn.prepareStatement(sql);
+            result = pstat.executeUpdate();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+
     public int insertData(DTO dto){
 //			StringBuilder sb = new StringBuilder();
 //			String sql = sb.append("insert into country7 value(")
 //					.append()
 
-        // 현재 country7 table에 임시 데이터를 넣어서 테스트 중
-        String sql = "insert into country6 values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        // 생성 경로를 countryinfo1으로 변경 후 사용
+        String sql = "insert into countryinfo1 values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         PreparedStatement pstat = null;
         int result = 0;
@@ -243,7 +259,7 @@ public class DAO {
         ResultSet rs = null;
 
         try {
-            //conn = DBConnect.getDBConnect();
+            conn = DBConnect.getDBConnect();
             pstat = conn.prepareStatement(sql);
             rs =pstat.executeQuery();
 

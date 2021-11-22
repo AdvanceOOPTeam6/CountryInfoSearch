@@ -18,12 +18,12 @@ public class Main {
 
         ArrayList<DTO> selected1 = testDAO.selectDBAll();
         for(DTO tempDTO1 : selected1) {
-            System.out.println(
-                    tempDTO1.getCountry() +" "+
-                            tempDTO1.getCode() +" "+
-                            tempDTO1.getCapital() + " "+
-                            tempDTO1.getClimate()
-            );
+//            System.out.println(
+//                    tempDTO1.getCountry() +" "+
+//                            tempDTO1.getCode() +" "+
+//                            tempDTO1.getCapital() + " "+
+//                            tempDTO1.getClimate()
+//            );
         }
 
 //        테이블 생성
@@ -91,10 +91,11 @@ public class Main {
             @Override
             public void run() {
                 try {
-                    new Frame();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+					new Intro();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
             }
         });
