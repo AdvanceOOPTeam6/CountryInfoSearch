@@ -380,7 +380,10 @@ public class Frame extends JFrame {
                     cardBack2.setVisible(!isVisible2);
                     break;
                 case "세계 지도 보기":
-                    setMap("가나");
+                    String id2 = JOptionPane.showInputDialog(null, "검색할 나라를 입력해주세요", "나라이름 검색", JOptionPane.OK_CANCEL_OPTION);
+                    if(id2 != null){
+                        setMap(id2);
+                    }
                     break;
                 case "프로젝트":
                     break;
