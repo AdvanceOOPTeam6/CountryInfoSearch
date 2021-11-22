@@ -72,9 +72,7 @@ public class Graph extends JPanel {
 
         // 그래프 옆 텍스트
         try{
-            System.out.println(array[0]);
             array[0] = array[0].substring(0,array[0].indexOf('('));
-            System.out.println(array[0]);
         }catch (Exception e){
             try {
                 array[0] = array[0].substring(0,array[0].indexOf(' '));
@@ -82,7 +80,6 @@ public class Graph extends JPanel {
                 // 비어있음
             }
         }
-        System.out.println(array[0]);
         this.religion1 = new JLabel(array[0]);
         this.religion1.setBounds(5,5,100,15);
         this.religion1.setFont(new Font("Monaco", Font.BOLD, 15));

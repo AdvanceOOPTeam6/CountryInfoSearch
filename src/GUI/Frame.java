@@ -34,6 +34,8 @@ public class Frame extends JFrame {
 
     public Frame() throws IOException {
         super("나라사랑카드");                // 타이틀
+        Icon logo = new Icon("src/GUI/Icons/Logo.png");
+        setIconImage(logo.getUpdateIcon().getImage());
         new SetData();                          // csv파일 받기
         getContentPane().setLayout(null);       // Absolute layout
         initComponent();

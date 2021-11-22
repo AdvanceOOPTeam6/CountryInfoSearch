@@ -22,6 +22,8 @@ public class Intro extends JFrame{
         setSize(1000, 600);         // 1000(width) X 600(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
+		Icon logo = new Icon("src/GUI/Icons/Logo.png");
+		setIconImage(logo.getUpdateIcon().getImage());
 		//ImageIcon img= new ImageIcon(Intro.class.getResource("/image/korea1.png"));
 		//imgLabel.setIcon(img);
 		//imgLabel.setBounds(0,0,1000,500);
