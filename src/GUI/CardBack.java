@@ -273,6 +273,11 @@ public class CardBack extends JPanel {
         add(this.city);
 
         // 종교
+        try {
+            religion = religion.substring(0,religion.indexOf('/'));
+        }catch (Exception e){
+            //아무것도 안함...
+        }
         this.religion= new JLabel(religion);
         this.religion.setFont(contentFont);
         this.religion.setBounds(50, 205, 200, 40);

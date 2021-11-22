@@ -164,7 +164,7 @@ public class DAO {
         ArrayList<DTO> resultSet = new ArrayList<>();
 
         // MYSQL 에서 데이터가 들어있는 테이블 쿼리
-        String sql = "select * FROM countryinfo.countryinfo1";
+        String sql = "select * FROM countryinfo.countryinfo6";
         PreparedStatement pstat = null;
         ResultSet rs = null;
 

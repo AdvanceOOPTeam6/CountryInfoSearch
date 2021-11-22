@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="76fc37fa-f25d-4f4a-b392-ffa342636599" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CardBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CardBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/CardBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CardBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CardFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CardFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,17 +160,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/GUI/Graph.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CountryInfoSearch$Main.ic" NAME="Main Coverage Results" MODIFIED="1637157731263" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -151,6 +151,11 @@ public class CardFront extends JPanel {
         add(this.countryCode);
 
         // 국가 수도
+        try {
+            capital = capital.substring(0,capital.indexOf('(')); // '/'뒤 문자열은 출력안함
+        }catch (Exception e){
+            //아무것도 안함...
+        }
         this.capital = new JLabel(capital);
         this.capital.setFont(contentFont);
         this.capital.setBounds(80, 280, 170, 40);
@@ -158,9 +163,14 @@ public class CardFront extends JPanel {
 
         // 국가 언어
         try {
-            language = language.substring(0,language.indexOf('/'));
+            language = language.substring(0,language.indexOf('/')); // '/'뒤 문자열은 출력안함
         }catch (Exception e){
             //아무것도 안함...
+        }
+        try {
+            language = language.substring(0,language.indexOf(' ')); // 공백문자 이후 출력안함
+        }catch (Exception e){
+
         }
         this.language = new JLabel(language);
         this.language.setFont(contentFont);
