@@ -10,11 +10,11 @@ import java.net.URLEncoder;
 import javax.swing.ImageIcon;
 
 public class GoogleAPI {
-
+    private String serviceKey = "AIzaSyDMMCfQgLnLEM-s_ZkXnB56cs7Z1QQOguc";
     public void downloadMap(String location) {
         try {
             String imageURL = "https://maps.googleapis.com/maps/api/staticmap?center=서울" +
-                    "&zoom=1&size=500x300&maptype=roadmap&markers=color:blue%7C"+URLEncoder.encode(location, "UTF-8")+"&key=AIzaSyDMMCfQgLnLEM-s_ZkXnB56cs7Z1QQOguc";
+                    "&zoom=1&size=500x300&maptype=roadmap&markers=color:blue%7C"+URLEncoder.encode(location, "UTF-8")+"&key="+serviceKey;
             URL url = new URL(imageURL);
             InputStream is = url.openStream();
             OutputStream os = new FileOutputStream(location);

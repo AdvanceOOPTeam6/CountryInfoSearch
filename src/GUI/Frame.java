@@ -37,7 +37,7 @@ public class Frame extends JFrame {
         new SetData();                          // csv파일 받기
         getContentPane().setLayout(null);       // Absolute layout
         initComponent();
-        createMenu();
+        createMenu();                           // 메뉴생성
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
         setSize(1000, 600);         // 1000(width) X 600(height)
