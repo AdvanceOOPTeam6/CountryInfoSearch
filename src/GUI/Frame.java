@@ -198,11 +198,11 @@ public class Frame extends JFrame {
         getContentPane().add(countryListPane);
 
         textInputField = new JTextField();
-        textInputField.setBounds(640, 20, 190, 20);
+        textInputField.setBounds(640, 20, 190, 26);
         getContentPane().add(textInputField);
         
         searchBtn= new JButton("검색");
-        searchBtn.setBounds(830, 20, 60, 20);
+        searchBtn.setBounds(830, 20, 60, 25);
         getContentPane().add(searchBtn);
         
         goBackBtn= new JButton("초기화");

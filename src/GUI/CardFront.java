@@ -157,6 +157,11 @@ public class CardFront extends JPanel {
         add(this.capital);
 
         // 국가 언어
+        try {
+            language = language.substring(0,language.indexOf('/'));
+        }catch (Exception e){
+            //아무것도 안함...
+        }
         this.language = new JLabel(language);
         this.language.setFont(contentFont);
         this.language.setBounds(80, 340, 170, 40);
