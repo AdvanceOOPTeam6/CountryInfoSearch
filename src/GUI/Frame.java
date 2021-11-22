@@ -1,6 +1,7 @@
 package GUI;
 import db.DAO;
 import db.DTO;
+import db.GoogleAPI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,6 +26,8 @@ public class Frame extends JFrame {
     private JButton searchBtn;
     private JButton goBackBtn;
     private Intro intro;
+    private GoogleAPI googleAPI = new GoogleAPI();
+    private JLabel googlemap = new JLabel();
 
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
@@ -382,5 +385,13 @@ public class Frame extends JFrame {
             }
 
         }
+    }
+
+    // 세계지도 그리기
+    public void setMap(String location) {
+        googleAPI.downloadMap(location);
+        googlemap.setIcon(googleAPI.getMap(location));
+        googleAPI.fileDelete(location);
+        add(googlemap);
     }
 }
