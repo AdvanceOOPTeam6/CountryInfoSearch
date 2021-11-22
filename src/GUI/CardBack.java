@@ -159,7 +159,7 @@ public class CardBack extends JPanel {
     }
 
 
-    public CardBack(String climate, String continent, String city, String religion, String ethnic, String area , Flag flag) throws IOException {
+    public CardBack(String countryName,String climate, String continent, String city, String religion, String ethnic, String area , Flag flag) throws IOException {
         setLayout(null);
         setBackground(Color.white);
         setVisible(false);
@@ -241,7 +241,7 @@ public class CardBack extends JPanel {
 
         // 국가 이름
         titleFont = new Font("Monaco", Font.BOLD, 20);
-        cardTitle = new JLabel("Ghana");
+        cardTitle = new JLabel(countryName);
         cardTitle.setFont(titleFont);
         cardTitle.setBounds(140, 20, 80, 30);
         add(cardTitle);

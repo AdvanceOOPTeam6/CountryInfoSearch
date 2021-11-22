@@ -185,7 +185,7 @@ public class Frame extends JFrame {
             cardFront.setBounds(60,50,250,400);
             getContentPane().add(cardFront);
 
-            cardBack = new CardBack("대륙성기후","아시아","서울,인천,부산","기독교","한민족","1,004만 128.5㏊",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
+            cardBack = new CardBack("한국","대륙성기후","아시아","서울,인천,부산","기독교","한민족","1,004만 128.5㏊",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
             cardBack.setBounds(60,50,250,400);
             getContentPane().add(cardBack);
 
@@ -209,7 +209,7 @@ public class Frame extends JFrame {
         goBackBtn.setBounds(710, 800, 100, 30);
         getContentPane().add(goBackBtn);
         
-        setNewCard("가나","아프리카","GH","아크라","영어","OO","OO","OO","OO", "OO", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
+        setNewCard("가나","아프리카","GH","아크라","영어","열대성","쿠마시(Kumasi)","기독교(71%)","아칸족", "227540", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
 
         googleMap = new JLabel();
         googleMap.setBounds(70, 500, 800, 300);
@@ -228,7 +228,7 @@ public class Frame extends JFrame {
         cardFront2.setBounds(350, 50, 250, 400);
         getContentPane().add(cardFront2);
 
-        cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area,new Flag(125,80,flagUrl));
+        cardBack2 = new CardBack(countryName ,climate,continent,city,religion,ethnic,area,new Flag(125,80,flagUrl));
         cardBack2.setBounds(350, 50, 250, 400);
         getContentPane().add(cardBack2);
 
