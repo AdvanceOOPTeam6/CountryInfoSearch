@@ -3,10 +3,14 @@ import db.DAO;
 import db.DTO;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
 import java.util.Map.Entry;
 
 
@@ -285,32 +289,98 @@ public class Frame extends JFrame {
 
     private void createMenu() {
         JMenuBar mb = new JMenuBar(); // 메뉴바 생성
-        JMenu screenMenu = new JMenu("보기");
-        JMenuItem [] menuItem = new JMenuItem [4];
-        String[] itemTitle = {"불러오기", "숨기기", "다시보기", "닫기"};
-//        // 보기 메뉴에 메뉴아이템 생성 삽입
-//        screenMenu.add(new JMenuItem("불러오기"));
-//        screenMenu.add(new JMenuItem("숨기기"));
-//        screenMenu.add(new JMenuItem("다시보기"));
-//        screenMenu.addSeparator(); // 분리선 삽입
-//        screenMenu.add(new JMenuItem("닫기"));
+        JMenu screenMenu = new JMenu("파일");
+        JMenuItem[] menuItem = new JMenuItem[2];
+        String[] itemTitle = {"CSV 파일 불러오기", "프로그램 종료"};
+
+        JMenu screenMenu2 = new JMenu("기능");
+        JMenuItem[] menuItem2 = new JMenuItem[5];
+        String[] itemTitle2 = {"나라 검색", "나라 리스트 초기화", "카드 앞면 보기", "카드 뒷면 보기","세계 지도 보기"};
+
 
         Menu listener = new Menu(); // Action 리스너 생성
-        for(int i=0; i<menuItem.length; i++) {
+        for (int i = 0; i < menuItem.length; i++) {
             menuItem[i] = new JMenuItem(itemTitle[i]); // 메뉴아이템 생성
             menuItem[i].addActionListener(listener); // 메뉴아이템에 Action 리스너 등록
             screenMenu.add(menuItem[i]); // 메뉴아이템을 Screen 메뉴에 삽입
         }
 
+        for (int i = 0; i < menuItem2.length; i++) {
+            menuItem2[i] = new JMenuItem(itemTitle2[i]); // 메뉴아이템 생성
+            menuItem2[i].addActionListener(listener); // 메뉴아이템에 Action 리스너 등록
+            screenMenu2.add(menuItem2[i]); // 메뉴아이템을 Screen 메뉴에 삽입
+        }
+
         // 메뉴바에 메뉴 삽입
-        mb.add(new JMenu("파일"));
-        mb.add(screenMenu); // 보기 메뉴 삽입
-        mb.add(new JMenu("편집"));
+        mb.add(screenMenu);
+        mb.add(screenMenu2); // 보기 메뉴 삽입
         mb.add(new JMenu("프로젝트"));
         mb.add(new JMenu("도움말"));
+
 
         // 메뉴바를 프레임에 부착
         setJMenuBar(mb);
     }
 
+    class Menu implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            String cmd = e.getActionCommand(); // 사용자가 선택한 메뉴아이템의 문자열 리턴
+            switch(cmd) {
+                // 메뉴 아이템의 종류 구분
+                case "CSV 파일 불러오기" :
+                    new SetData();
+                    break;
+                case "프로그램 종료" :
+                    System.exit(0);
+                    break;
+                case "나라 검색" :
+                    String id = JOptionPane.showInputDialog(null, "검색할 나라를 입력해주세요", "나라이름 검색", JOptionPane.OK_CANCEL_OPTION);
+                    if(id != null){
+                        HashMap<String, String> searchMap = new HashMap<String, String>();
+                        DAO searchDAO = new DAO();
+                        ArrayList<DTO> searchinit = searchDAO.searchDB("");
+                        for(DTO tempDTO1 : searchinit) {
+                            searchMap.put(tempDTO1.getCountry(),tempDTO1.getCountry());
+                        }
+
+                        List<String> containValue = new ArrayList<>();
+                        for (Entry<String,String> entry : searchMap.entrySet()) {
+                            if(entry.getValue().contains(id)) {
+                                containValue.add(entry.getValue());
+                                countryListPane.setSearch(containValue); //검색한값만 나오게
+                            }
+                        }
+                    }
+                    break;
+                case "나라 리스트 초기화" :
+                    countryListPane.setBack();
+                    break;
+                case "카드 앞면 보기":
+                    isVisible1 = true;
+                    cardFront.setVisible(isVisible1);
+                    cardBack.setVisible(!isVisible1);
+
+                    isVisible2 = true;
+                    cardFront2.setVisible(isVisible2);
+                    cardBack2.setVisible(!isVisible2);
+                    break;
+                case "카드 뒷면 보기":
+                    isVisible1 = false;
+                    cardFront.setVisible(isVisible1);
+                    cardBack.setVisible(!isVisible1);
+
+                    isVisible2 = false;
+                    cardFront2.setVisible(isVisible2);
+                    cardBack2.setVisible(!isVisible2);
+                    break;
+                case "세계 지도 보기":
+                    break;
+                case "프로젝트":
+                    break;
+                case "도움말":
+                    break;
+            }
+
+        }
+    }
 }
