@@ -40,8 +40,9 @@ public class Frame extends JFrame {
         createMenu();                           // 메뉴생성
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
-        setSize(1000, 950);         // 1000(width) X 600(height)
+        setSize(950, 900);          // 950(width) X 900(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
+        setMap("가나");                          // 초기 세계지도 이미지 띄우기
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
 
         cardFront.addMouseListener(new MouseListener() {
@@ -181,11 +182,11 @@ public class Frame extends JFrame {
         try {
             // 첫번째 카드
             cardFront = new CardFront("한국","아시아","KR","서울","한국어",new Flag(250,130,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
-            cardFront.setBounds(60,100,250,400);
+            cardFront.setBounds(60,50,250,400);
             getContentPane().add(cardFront);
 
             cardBack = new CardBack("대륙성기후","아시아","서울,인천,부산","기독교","한민족","1,004만 128.5㏊",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
-            cardBack.setBounds(60,100,250,400);
+            cardBack.setBounds(60,50,250,400);
             getContentPane().add(cardBack);
 
         } catch (IOException e) {
@@ -193,25 +194,25 @@ public class Frame extends JFrame {
         }
 
         countryListPane = new CountryListPane(this);
-        countryListPane.setBounds(640,100,250,750);
+        countryListPane.setBounds(640,50,250,750);
         getContentPane().add(countryListPane);
 
         textInputField = new JTextField();
-        textInputField.setBounds(640, 70, 190, 20);
+        textInputField.setBounds(640, 20, 190, 20);
         getContentPane().add(textInputField);
         
         searchBtn= new JButton("검색");
-        searchBtn.setBounds(830, 70, 60, 20);
+        searchBtn.setBounds(830, 20, 60, 20);
         getContentPane().add(searchBtn);
         
         goBackBtn= new JButton("목록으로");
-        goBackBtn.setBounds(710, 850, 100, 30);
+        goBackBtn.setBounds(710, 800, 100, 30);
         getContentPane().add(goBackBtn);
         
         setNewCard("가나","아프리카","GH","아크라","영어","OO","OO","OO","OO", "OO", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
 
         googleMap = new JLabel();
-        googleMap.setBounds(80, 550, 800, 300);
+        googleMap.setBounds(70, 500, 800, 300);
         getContentPane().add(googleMap);
     }
 
@@ -224,11 +225,11 @@ public class Frame extends JFrame {
         }
 //         두번째 카드
         cardFront2 = new CardFront(countryName,continent,countryCode,capital,language,new Flag(250,130,flagUrl));
-        cardFront2.setBounds(350, 100, 250, 400);
+        cardFront2.setBounds(350, 50, 250, 400);
         getContentPane().add(cardFront2);
 
         cardBack2 = new CardBack(climate,continent,city,religion,ethnic,area,new Flag(125,80,flagUrl));
-        cardBack2.setBounds(350, 100, 250, 400);
+        cardBack2.setBounds(350, 50, 250, 400);
         getContentPane().add(cardBack2);
 
         cardFront2.setVisible(isVisible2);
@@ -380,7 +381,7 @@ public class Frame extends JFrame {
                     cardBack2.setVisible(!isVisible2);
                     break;
                 case "세계 지도 보기":
-                    String id2 = JOptionPane.showInputDialog(null, "검색할 나라를 입력해주세요", "나라이름 검색", JOptionPane.OK_CANCEL_OPTION);
+                    String id2 = JOptionPane.showInputDialog(null, "검색할 나라를 입력해주세요", "세계지도 검색", JOptionPane.OK_CANCEL_OPTION);
                     if(id2 != null){
                         setMap(id2);
                     }

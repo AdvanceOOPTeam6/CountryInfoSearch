@@ -14,7 +14,7 @@ public class GoogleAPI {
     public void downloadMap(String location) {
         try {
             String imageURL = "https://maps.googleapis.com/maps/api/staticmap?center=서울" +
-                    "&zoom=1&size=500x300&maptype=roadmap&markers=size:mid%7Ccolor:blue%7C40.711614,127&markers=color:red%7C"+URLEncoder.encode(location, "UTF-8")+"&key="+serviceKey;
+                    "&zoom=1&size=520x300&maptype=roadmap&markers=size:mid%7Ccolor:blue%7C40.711614,127&markers=color:red%7C"+URLEncoder.encode(location, "UTF-8")+"&key="+serviceKey;
             URL url = new URL(imageURL);
             InputStream is = url.openStream();
             OutputStream os = new FileOutputStream(location);
@@ -33,7 +33,7 @@ public class GoogleAPI {
     }
 
     public ImageIcon getMap(String location) {
-        return new ImageIcon((new ImageIcon(location)).getImage().getScaledInstance(500, 300, java.awt.Image.SCALE_SMOOTH));
+        return new ImageIcon((new ImageIcon(location)).getImage().getScaledInstance(520, 300, java.awt.Image.SCALE_SMOOTH));
     }
 
     public void fileDelete(String filename) {
