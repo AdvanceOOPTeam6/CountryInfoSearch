@@ -144,8 +144,4 @@ public class CountryListPane extends JScrollPane {
              }
          });
     }
-
-    public String getClickedValue() {
-        return clickedValue;
-    }
 }

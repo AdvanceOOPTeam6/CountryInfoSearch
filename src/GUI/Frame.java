@@ -40,7 +40,7 @@ public class Frame extends JFrame {
         createMenu();                           // 메뉴생성
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
-        setSize(950, 900);          // 950(width) X 900(height)
+        setSize(950, 920);          // 950(width) X 900(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setMap("가나");                          // 초기 세계지도 이미지 띄우기
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
@@ -205,8 +205,8 @@ public class Frame extends JFrame {
         searchBtn.setBounds(830, 20, 60, 20);
         getContentPane().add(searchBtn);
         
-        goBackBtn= new JButton("목록으로");
-        goBackBtn.setBounds(710, 800, 100, 30);
+        goBackBtn= new JButton("초기화");
+        goBackBtn.setBounds(640, 800, 250, 25);
         getContentPane().add(goBackBtn);
         
         setNewCard("가나","아프리카","GH","아크라","영어","열대성","쿠마시(Kumasi)","기독교(71%)","아칸족", "227540", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
@@ -400,6 +400,7 @@ public class Frame extends JFrame {
         googleAPI.downloadMap(location);
         googleMap.setIcon(googleAPI.getMap(location));
         googleAPI.fileDelete(location);
+        googleMap.setBounds(60,500,540,300);
         getContentPane().add(googleMap);
     }
 }

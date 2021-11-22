@@ -33,7 +33,7 @@ public class GoogleAPI {
     }
 
     public ImageIcon getMap(String location) {
-        return new ImageIcon((new ImageIcon(location)).getImage().getScaledInstance(520, 300, java.awt.Image.SCALE_SMOOTH));
+        return new ImageIcon((new ImageIcon(location)).getImage().getScaledInstance(540, 300, java.awt.Image.SCALE_SMOOTH));
     }
 
     public void fileDelete(String filename) {
