@@ -185,7 +185,7 @@ public class Frame extends JFrame {
             cardFront.setBounds(60,50,250,400);
             getContentPane().add(cardFront);
 
-            cardBack = new CardBack("한국","대륙성기후","아시아","서울,인천,부산","기독교","한민족","1,004만 128.5㏊",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
+            cardBack = new CardBack("한국","대륙성기후","아시아","서울,인천,부산","기독교","한민족","100188",new Flag(125,80,"https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/241/20201125_220348799.gif"));
             cardBack.setBounds(60,50,250,400);
             getContentPane().add(cardBack);
 

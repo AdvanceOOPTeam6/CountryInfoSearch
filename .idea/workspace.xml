@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CardBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/CardBack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/CardBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CardBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/CardFront.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/CardFront.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Frame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

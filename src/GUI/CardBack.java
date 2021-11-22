@@ -152,7 +152,7 @@ public class CardBack extends JPanel {
         add(ethnic);
 
         // 면적
-        area= new JLabel("2,385만 3천ha");
+        area= new JLabel("100188㎢");
         area.setFont(contentFont);
         area.setBounds(50, 285, 200, 40);
         add(area);
@@ -290,7 +290,7 @@ public class CardBack extends JPanel {
         add(this.ethnic);
 
         // 면적
-        this.area= new JLabel(area);
+        this.area= new JLabel(area+"㎢");
         this.area.setFont(contentFont);
         this.area.setBounds(50, 285, 200, 40);
         add(this.area);
