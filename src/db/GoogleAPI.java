@@ -14,7 +14,7 @@ public class GoogleAPI {
     public void downloadMap(String location) {
         try {
             String imageURL = "https://maps.googleapis.com/maps/api/staticmap?center=서울" +
-                    "&zoom=1&size=500x300&maptype=roadmap&markers=color:blue%7C"+URLEncoder.encode(location, "UTF-8")+"&key="+serviceKey;
+                    "&zoom=1&size=500x300&maptype=roadmap&markers=color:red%7Clabel:G%7C40.711614,127&markers=color:blue%7C"+URLEncoder.encode(location, "UTF-8")+"&key="+serviceKey;
             URL url = new URL(imageURL);
             InputStream is = url.openStream();
             OutputStream os = new FileOutputStream(location);

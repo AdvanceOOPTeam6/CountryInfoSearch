@@ -51,6 +51,7 @@ public class CountryListPane extends JScrollPane {
                                     tempDTO1.getClimate(),tempDTO1.getMajorcity(),
                                     tempDTO1.getReligion(),tempDTO1.getEthnicgroup(),Integer.toString(tempDTO1.getArea()),
                                     flagApi.CountryFlag(tempDTO1.getCode()));
+                            frame.setMap(clickedValue);
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
@@ -94,6 +95,7 @@ public class CountryListPane extends JScrollPane {
                                     tempDTO1.getClimate(),tempDTO1.getMajorcity(),
                                     tempDTO1.getReligion(),tempDTO1.getEthnicgroup(),Integer.toString(tempDTO1.getArea()),
                                     flagApi.CountryFlag(tempDTO1.getCode()));
+                            frame.setMap(clickedValue);
                         } catch (IOException ex) {
                             ex.printStackTrace();
                         }
@@ -133,6 +135,7 @@ public class CountryListPane extends JScrollPane {
                                      tempDTO1.getClimate(),tempDTO1.getMajorcity(),
                                      tempDTO1.getReligion(),tempDTO1.getEthnicgroup(),Integer.toString(tempDTO1.getArea()),
                                      flagApi.CountryFlag(tempDTO1.getCode()));
+                             frame.setMap(clickedValue);
                          } catch (IOException ex) {
                              ex.printStackTrace();
                          }

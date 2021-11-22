@@ -27,7 +27,7 @@ public class Frame extends JFrame {
     private JButton goBackBtn;
     private Intro intro;
     private GoogleAPI googleAPI = new GoogleAPI();
-    private JLabel googlemap = new JLabel();
+    private JLabel googleMap;
 
     private boolean isVisible1 = true;
     private boolean isVisible2 = true;
@@ -40,7 +40,7 @@ public class Frame extends JFrame {
         createMenu();                           // 메뉴생성
         setVisible(true);
         setResizable(false);                    // 창 크기 변경 불가
-        setSize(1000, 600);         // 1000(width) X 600(height)
+        setSize(1000, 950);         // 1000(width) X 600(height)
         setLocationRelativeTo(null);            // 실행시 화면 가운데로 정렬
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
 
@@ -193,7 +193,7 @@ public class Frame extends JFrame {
         }
 
         countryListPane = new CountryListPane(this);
-        countryListPane.setBounds(640,100,250,400);
+        countryListPane.setBounds(640,100,250,750);
         getContentPane().add(countryListPane);
 
         textInputField = new JTextField();
@@ -205,11 +205,14 @@ public class Frame extends JFrame {
         getContentPane().add(searchBtn);
         
         goBackBtn= new JButton("목록으로");
-        goBackBtn.setBounds(710, 500, 100, 30);
+        goBackBtn.setBounds(710, 850, 100, 30);
         getContentPane().add(goBackBtn);
         
         setNewCard("가나","아프리카","GH","아크라","영어","OO","OO","OO","OO", "OO", "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20201125_211109671.gif");
 
+        googleMap = new JLabel();
+        googleMap.setBounds(80, 550, 800, 300);
+        getContentPane().add(googleMap);
     }
 
     public void setNewCard(String countryName, String continent, String countryCode, String capital, String language, String climate, String city, String religion, String ethnic, String area, String flagUrl) throws IOException {
@@ -377,6 +380,7 @@ public class Frame extends JFrame {
                     cardBack2.setVisible(!isVisible2);
                     break;
                 case "세계 지도 보기":
+                    setMap("가나");
                     break;
                 case "프로젝트":
                     break;
@@ -390,8 +394,8 @@ public class Frame extends JFrame {
     // 세계지도 그리기
     public void setMap(String location) {
         googleAPI.downloadMap(location);
-        googlemap.setIcon(googleAPI.getMap(location));
+        googleMap.setIcon(googleAPI.getMap(location));
         googleAPI.fileDelete(location);
-        add(googlemap);
+        getContentPane().add(googleMap);
     }
 }
