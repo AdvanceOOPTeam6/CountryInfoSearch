@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="76fc37fa-f25d-4f4a-b392-ffa342636599" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/GUI/Icons/Logo.png" afterDir="false" />
+    <list default="true" id="76fc37fa-f25d-4f4a-b392-ffa342636599" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/Help.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/Icons/help.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/Icons/project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame$Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CountryInfoSearch/GUI/Frame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/Intro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/Intro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +149,7 @@
       <workItem from="1636228957538" duration="32000" />
       <workItem from="1636258765446" duration="15081000" />
       <workItem from="1636836737563" duration="512000" />
+      <workItem from="1637635682098" duration="3945000" />
     </task>
     <servers />
   </component>

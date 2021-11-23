@@ -16,7 +16,6 @@ public class Intro extends JFrame{
 	public Intro() throws IOException{
 		super("나라사랑카드");                // 타이틀
 		setLayout(null);
-		setSize(1000, 600);
 		setVisible(true);
 		setResizable(false);                    // 창 크기 변경 불가
         setSize(1000, 600);         // 1000(width) X 600(height)

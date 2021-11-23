@@ -299,6 +299,8 @@ public class Frame extends JFrame {
     private void createMenu() {
         JMenuBar mb = new JMenuBar(); // 메뉴바 생성
         JMenu screenMenu = new JMenu("파일");
+        JMenuItem project = new JMenuItem("프로젝트");
+        JMenuItem help = new JMenuItem("도움말");
         JMenuItem[] menuItem = new JMenuItem[2];
         String[] itemTitle = {"CSV 파일 불러오기", "프로그램 종료"};
 
@@ -320,12 +322,14 @@ public class Frame extends JFrame {
             screenMenu2.add(menuItem2[i]); // 메뉴아이템을 Screen 메뉴에 삽입
         }
 
+        project.addActionListener(listener);
+        help.addActionListener(listener);
+
         // 메뉴바에 메뉴 삽입
         mb.add(screenMenu);
         mb.add(screenMenu2); // 보기 메뉴 삽입
-        mb.add(new JMenu("프로젝트"));
-        mb.add(new JMenu("도움말"));
-
+        mb.add(project);
+        mb.add(help);
 
         // 메뉴바를 프레임에 부착
         setJMenuBar(mb);
@@ -334,6 +338,7 @@ public class Frame extends JFrame {
     class Menu implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             String cmd = e.getActionCommand(); // 사용자가 선택한 메뉴아이템의 문자열 리턴
+            System.out.println(cmd);
             switch(cmd) {
                 // 메뉴 아이템의 종류 구분
                 case "CSV 파일 불러오기" :
@@ -389,8 +394,20 @@ public class Frame extends JFrame {
                     }
                     break;
                 case "프로젝트":
+                    System.out.println("프로젝트");
+                    try {
+                        new Project();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                        System.out.println(ex);
+                    }
                     break;
                 case "도움말":
+                    try {
+                        new Help();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
                     break;
             }
 
