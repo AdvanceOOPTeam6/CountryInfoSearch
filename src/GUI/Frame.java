@@ -299,14 +299,16 @@ public class Frame extends JFrame {
     private void createMenu() {
         JMenuBar mb = new JMenuBar(); // 메뉴바 생성
         JMenu screenMenu = new JMenu("파일");
-        JMenuItem project = new JMenuItem("프로젝트");
-        JMenuItem help = new JMenuItem("도움말");
         JMenuItem[] menuItem = new JMenuItem[2];
         String[] itemTitle = {"CSV 파일 불러오기", "프로그램 종료"};
 
         JMenu screenMenu2 = new JMenu("기능");
         JMenuItem[] menuItem2 = new JMenuItem[5];
         String[] itemTitle2 = {"나라 검색", "나라 리스트 초기화", "카드 앞면 보기", "카드 뒷면 보기","세계 지도 보기"};
+
+        JMenu screenMenu3 = new JMenu("정보");
+        JMenuItem[] menuItem3 = new JMenuItem[2];
+        String[] itemTitle3 = {"프로젝트", "도움말"};
 
 
         Menu listener = new Menu(); // Action 리스너 생성
@@ -322,14 +324,17 @@ public class Frame extends JFrame {
             screenMenu2.add(menuItem2[i]); // 메뉴아이템을 Screen 메뉴에 삽입
         }
 
-        project.addActionListener(listener);
-        help.addActionListener(listener);
+        for (int i = 0; i < menuItem3.length; i++) {
+            menuItem2[i] = new JMenuItem(itemTitle3[i]); // 메뉴아이템 생성
+            menuItem2[i].addActionListener(listener); // 메뉴아이템에 Action 리스너 등록
+            screenMenu3.add(menuItem2[i]); // 메뉴아이템을 Screen 메뉴에 삽입
+        }
 
-        // 메뉴바에 메뉴 삽입
-        mb.add(screenMenu);
+
+        mb.add(screenMenu);  // 메뉴바에 메뉴 삽입
         mb.add(screenMenu2); // 보기 메뉴 삽입
-        mb.add(project);
-        mb.add(help);
+        mb.add(screenMenu3); // 정보 메뉴 삽입
+
 
         // 메뉴바를 프레임에 부착
         setJMenuBar(mb);
@@ -394,7 +399,6 @@ public class Frame extends JFrame {
                     }
                     break;
                 case "프로젝트":
-                    System.out.println("프로젝트");
                     try {
                         new Project();
                     } catch (IOException ex) {
