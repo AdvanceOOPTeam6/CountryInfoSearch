@@ -1,11 +1,6 @@
 package GUI;
 import javax.swing.*;
-
-import GUI.Icon;
-
 import java.awt.*;
-import java.net.URL;
-import javax.imageio.ImageIO;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.IOException;
@@ -23,10 +18,7 @@ public class Intro extends JFrame{
         setDefaultCloseOperation(EXIT_ON_CLOSE);// 나가면 프로그램 종료
 		Icon logo = new Icon("src/GUI/Icons/Logo.png");
 		setIconImage(logo.getUpdateIcon().getImage());
-		//ImageIcon img= new ImageIcon(Intro.class.getResource("/image/korea1.png"));
-		//imgLabel.setIcon(img);
-		//imgLabel.setBounds(0,0,1000,500);
-		//add(imgLabel);
+
         Icon icon_code = new Icon("src/GUI/Icons/location-g200a31666_1280.png",1000,600);
         imgLabel = new JLabel(icon_code.getUpdateIcon());
         imgLabel.setHorizontalAlignment(JLabel.CENTER);

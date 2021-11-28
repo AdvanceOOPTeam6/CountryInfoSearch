@@ -1,12 +1,8 @@
 package GUI;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.SoftBevelBorder;
 import java.awt.*;
 import java.io.IOException;
-import java.net.URL;
 
 public class CardFront extends JPanel {
 

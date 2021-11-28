@@ -7,7 +7,7 @@ public class Project extends JDialog {
     public Project() throws IOException {
                        // 타이틀
 
-        setSize(920, 960);
+        setSize(720, 650);
         setVisible(true);
         setModal(true);
         setResizable(false);                    // 창 크기 변경 불가
@@ -15,10 +15,10 @@ public class Project extends JDialog {
         Icon logo = new Icon("src/GUI/Icons/Logo.png");
         setIconImage(logo.getUpdateIcon().getImage());
 
-        Icon project = new Icon("src/GUI/Icons/project.png", 900, 900);
+        Icon project = new Icon("src/GUI/Icons/project.png", 700, 600);
         JLabel imgLabel = new JLabel(project.getUpdateIcon());
         imgLabel.setHorizontalAlignment(JLabel.CENTER);
-        imgLabel.setBounds(0,0,900,900);
+        imgLabel.setBounds(0,0,700,600);
         add(imgLabel);
 
     }

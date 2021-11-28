@@ -45,14 +45,6 @@ public class CardBack extends JPanel {
         graph.setBounds(0,330,250,70);
         add(graph);
 
-        // 아이콘
-        // 수도
-//        Icon icon_capital = new Icon("src/GUI/Icons/flag-outline.png",30,30);
-//        capital_icon = new JLabel(icon_capital.getUpdateIcon());
-//        capital_icon.setHorizontalAlignment(JLabel.CENTER);
-//        capital_icon.setBounds(10, 90, 30, 30);
-//        add(capital_icon);
-
         // 기후
         Icon icon_climate = new Icon("src/GUI/Icons/sunny-outline.png",30,30);
         climate_icon = new JLabel(icon_climate.getUpdateIcon());
@@ -94,14 +86,6 @@ public class CardBack extends JPanel {
         area_icon.setHorizontalAlignment(JLabel.CENTER);
         area_icon.setBounds(10, 290, 30, 30);
         add(area_icon);
-
-        //언어
-//        Icon icon_language= new Icon("src/GUI/Icons/earth-outline.png",30,30);
-//        language_icon = new JLabel(icon_language.getUpdateIcon());
-//        language_icon.setHorizontalAlignment(JLabel.CENTER);
-//        language_icon.setBounds(10, 370, 30, 30);
-//        add(language_icon);
-
 
         ////////////////////////////////////////////////////////////////
         /////// 텍스트 출력단
@@ -178,14 +162,6 @@ public class CardBack extends JPanel {
         graph.setBounds(0,330,250,70);
         add(graph);
 
-        // 아이콘
-        // 수도
-//        Icon icon_capital = new Icon("src/GUI/Icons/flag-outline.png",30,30);
-//        capital_icon = new JLabel(icon_capital.getUpdateIcon());
-//        capital_icon.setHorizontalAlignment(JLabel.CENTER);
-//        capital_icon.setBounds(10, 90, 30, 30);
-//        add(capital_icon);
-
         // 기후
         Icon icon_climate = new Icon("src/GUI/Icons/sunny-outline.png",30,30);
         climate_icon = new JLabel(icon_climate.getUpdateIcon());
@@ -228,14 +204,6 @@ public class CardBack extends JPanel {
         area_icon.setBounds(10, 290, 30, 30);
         add(area_icon);
 
-        //언어
-//        Icon icon_language= new Icon("src/GUI/Icons/earth-outline.png",30,30);
-//        language_icon = new JLabel(icon_language.getUpdateIcon());
-//        language_icon.setHorizontalAlignment(JLabel.CENTER);
-//        language_icon.setBounds(10, 370, 30, 30);
-//        add(language_icon);
-
-
         ////////////////////////////////////////////////////////////////
         /////// 텍스트 출력단
 
@@ -243,7 +211,7 @@ public class CardBack extends JPanel {
         titleFont = new Font("Monaco", Font.BOLD, 20);
         cardTitle = new JLabel(countryName);
         cardTitle.setFont(titleFont);
-        cardTitle.setBounds(140, 20, 80, 30);
+        cardTitle.setBounds(140, 20, 120, 30);
         add(cardTitle);
 
         // 대륙
